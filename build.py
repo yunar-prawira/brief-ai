@@ -297,7 +297,7 @@ def build():
         top = items[0]
         hero_bits = [human_date(top["date"])]
         if top["meta"].get("edisi"):
-            hero_bits.insert(0, f"Edisi terbaru · {esc(top['meta']['edisi'])}")
+            hero_bits.insert(0, f"Edisi {esc(top['meta']['edisi'])}")
         hero = f"""<section class="hero" style="--c:{top['color']}">
 <div class="kicker">{tag_pills(top, 2)}<span>{" · ".join(hero_bits)}</span></div>
 <h1><a href="{SITE_URL}/{top['slug']}.html">{esc(top['meta']['title'])}</a></h1>

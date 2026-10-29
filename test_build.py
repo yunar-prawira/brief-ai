@@ -36,7 +36,7 @@ def main():
         tag_pages = sorted(p.name for p in (out / "tag").glob("*.html"))
 
         checks = {
-            "urutan: hero = terbaru": idx.index("Edisi terbaru") < idx.index("2026-01-05-lama.html"),
+            "urutan: hero = terbaru": idx.index('class="hero"') < idx.index("2026-01-05-lama.html"),
             "hero pakai post terbaru": 'class="hero"' in idx and "Yang Baru" in idx.split('class="hero"')[1][:600],
             "kartu edisi sebelumnya": "2026-01-05-lama.html" in idx and "Edisi 01 ·" in idx,
             "label tanggal Indonesia": "10 Maret 2026" in idx and "5 Januari 2026" in idx,
