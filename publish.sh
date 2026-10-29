@@ -23,10 +23,11 @@ NEWEST=$(ls docs/*.html | grep -v '/index.html' | sort | tail -1 | xargs basenam
 
 # tunggu build Pages untuk commit ini selesai, lalu pastikan halaman + css benar-benar tersaji
 for i in $(seq 1 40); do
-  built=$(gh api "repos/$REPO/pages/builds/latest" --jq '.commit' 2>/dev/null || true)
+  latest=$(gh api "repos/$REPO/pages/builds/latest" --jq '.status+" "+.commit' 2>/dev/null || true)
+  status=${latest%% *}; built=${latest##* }
   page=$(curl -s -o /dev/null -w "%{http_code}" "$SITE/$NEWEST")
   css=$(curl -s -o /dev/null -w "%{http_code}" "$SITE/style.css")
-  if [ "$built" = "$SHA" ] && [ "$page" = "200" ] && [ "$css" = "200" ]; then
+  if [ "$built" = "$SHA" ] && [ "$status" = "built" ] && [ "$page" = "200" ] && [ "$css" = "200" ]; then
     echo "LIVE ($SHA): $SITE/$NEWEST"
     exit 0
   fi
