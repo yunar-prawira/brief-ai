@@ -54,13 +54,16 @@ benar-benar menyajikan commit tersebut, dan mencetak URL `LIVE`. Kalau keluar
 ## Aturan isi
 
 - Jangan mengarang fakta, angka, kutipan, atau tanggal. Sumber tipis = edisi lebih pendek.
-- Rotasi topik: tiap edisi minimal 2 item AI/teknologi, maksimal 1 item politik (dan ringan).
-- **Topik minat selalu lewat kacamata AI.** Untuk Manchester United, HR/payroll, SaaS & pricing,
-  product build, Indonesia, dan politik: yang dicari adalah bagaimana AI dikembangkan atau
-  dimanfaatkan di domain itu — model data/scouting di sepak bola, AI di rekrutmen & payroll,
-  AI dalam pricing/produk SaaS, agentic coding & tools build, kebijakan dan adopsi AI di
-  Indonesia, politik regulasi AI. Berita cedera pemain, jadwal klub, atau politik umum tanpa
-  kaitan AI = tidak masuk. Tidak ada sudut AI yang nyata? Lewati topiknya.
+- **Inti tiap edisi adalah AI itu sendiri**: berita AI, perkembangan model/riset/tool, dan AI
+  untuk development. Minimal 3 item inti, dan bagian terbesar edisi harus tentang ini.
+- **Topik minat itu opsional, 0-2 item per edisi.** Manchester United, HR/payroll, SaaS &
+  pricing, product build, Indonesia, politik: hanya masuk kalau hari itu ada berita nyata,
+  dan selalu lewat kacamata AI — AI untuk data/scouting bola, AI di rekrutmen & payroll,
+  AI dalam pricing/produk SaaS, agentic coding & tools build, kebijakan/adopsi AI di
+  Indonesia, politik regulasi AI. Berita cedera pemain, jadwal klub, startup tanpa AI, atau
+  politik umum tanpa AI = tidak masuk.
+- **Tidak wajib ada item topik minat.** Kalau tidak ada sudut AI yang nyata, lewati dan
+  terbitkan edisi yang murni AI. Jangan memaksakan topik supaya edisi terlihat lebar.
 - Hindari cerita yang sudah dipakai: cek `log/seen.json` dan 3 post terakhir.
 - Tanpa buzzword ("revolusioner", "game changer"). Angka > adjektiva.
 
