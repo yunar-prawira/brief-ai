@@ -10,9 +10,9 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 
 FIXTURES = {
-    "2026-01-05-lama.md": '---\ntitle: "Yang Lama"\ndate: 2026-01-05\nringkas: "post lama"\n---\n'
-                          "Isi **lama** dengan `kode`.\n",
-    "2026-03-10-baru.md": '---\ntitle: "Yang Baru"\ndate: 2026-03-10\nedisi: "02"\ntag: "Uji"\n'
+    "2026-01-05-lama.md": '---\ntitle: "Yang Lama"\ndate: 2026-01-05\nedisi: "01"\ntag: "AI"\n'
+                          'ringkas: "post lama"\n---\nIsi **lama** dengan `kode`.\n',
+    "2026-03-10-baru.md": '---\ntitle: "Yang Baru"\ndate: 2026-03-10\nedisi: "02"\ntag: "Man Utd, SaaS"\n'
                           'ringkas: "post baru <dengan & tanda>"\n---\n- satu\n- dua\n',
 }
 
@@ -28,19 +28,27 @@ def main():
 
         out = tmp / "docs"
         idx = (out / "index.html").read_text()
-        body = idx.split("<body>")[1]
+        body = idx.split("<body")[1].split(">", 1)[1]
         baru = (out / "2026-03-10-baru.html").read_text()
         lama = (out / "2026-01-05-lama.html").read_text()
         items = ET.parse(out / "feed.xml").getroot().findall("./channel/item")
+        theme_baru = "#d92b2b"  # tag pertama "Man Utd"
+        tag_pages = sorted(p.name for p in (out / "tag").glob("*.html"))
 
         checks = {
-            "urutan terbaru dulu": idx.index("2026-03-10-baru.html") < idx.index("2026-01-05-lama.html"),
-            "label edisi + tanggal": "Edisi 02 ·" in idx and "10 Maret 2026" in idx,
+            "urutan: hero = terbaru": idx.index("Edisi terbaru") < idx.index("2026-01-05-lama.html"),
+            "hero pakai post terbaru": 'class="hero"' in idx and "Yang Baru" in idx.split('class="hero"')[1][:600],
+            "kartu edisi sebelumnya": "2026-01-05-lama.html" in idx and "Edisi 01 ·" in idx,
+            "label tanggal Indonesia": "10 Maret 2026" in idx and "5 Januari 2026" in idx,
+            "warna tema ikut tag utama": f"--c:{theme_baru}" in idx and f"--c:{theme_baru}" in baru,
             "kutip frontmatter tidak bocor": "&quot;" not in body,
             "escaping HTML": "&lt;dengan &amp; tanda&gt;" in idx,
             "markdown": "<strong>lama</strong>" in lama and "<code>kode</code>" in lama,
             "list jadi <li>": "<li>satu</li>" in baru,
             "title halaman": "<title>Yang Baru —" in baru,
+            "pager antar edisi": "Lebih lama" in baru and "Lebih baru" in lama,
+            "halaman topik: 3 tag unik": tag_pages == ["ai.html", "man-utd.html", "saas.html"],
+            "tag page memuat judul topik": "Man Utd" in (out / "tag" / "man-utd.html").read_text(),
             "rss urut + jumlah": len(items) == 2 and items[0].findtext("title") == "Yang Baru",
             ".nojekyll": (out / ".nojekyll").exists(),
         }
