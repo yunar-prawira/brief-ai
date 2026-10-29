@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build statis Brief AI.
+"""Build statis Yunar AI Brief.
 
 posts/*.md -> docs/index.html, docs/<slug>.html, docs/tag/<tag>.html, docs/feed.xml
 
@@ -25,124 +25,39 @@ import markdown
 ROOT = Path(__file__).resolve().parent
 POSTS = ROOT / "posts"
 OUT = ROOT / "docs"
+STYLE = ROOT / "style.css"
 
-SITE_TITLE = "Brief AI"
+SITE_TITLE = "Yunar AI Brief"
 SITE_TAGLINE = "Catatan harian soal AI — dan hal lain yang Yunar pedulikan."
 SITE_URL = "https://yunar-prawira.github.io/brief-ai"
 
+# topik -> (warna utama, warna gradien)
 THEMES = {
-    "ai": "#4f46e5", "dev": "#0ea5e9", "man utd": "#d92b2b", "hr": "#0d9488",
-    "saas": "#7c3aed", "product": "#d97706", "indonesia": "#059669",
-    "politik": "#64748b", "riset": "#db2777", "default": "#8a5a2b",
+    "ai": ("#4f46e5", "#06b6d4"),
+    "dev": ("#0284c7", "#6366f1"),
+    "man utd": ("#dc2626", "#f59e0b"),
+    "hr": ("#0d9488", "#22c55e"),
+    "saas": ("#7c3aed", "#ec4899"),
+    "product": ("#ea580c", "#f59e0b"),
+    "indonesia": ("#e11d48", "#f97316"),
+    "politik": ("#475569", "#0ea5e9"),
+    "riset": ("#db2777", "#8b5cf6"),
+    "default": ("#8a5a2b", "#d97706"),
 }
 
-CSS = """
-:root{
-  --bg:#fcfcfb; --panel:#ffffff; --ink:#111110; --ink-2:#3d3b36; --muted:#78736a;
-  --line:#e8e4db; --line-soft:#f1eee7; --c:#4f46e5;
-  --sans:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --serif:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
-  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-  --r:14px;
-}
-@media (prefers-color-scheme: dark){
-  :root{ --bg:#0d0d0c; --panel:#151513; --ink:#f2f0ea; --ink-2:#cdc9c0; --muted:#98938a;
-         --line:#272621; --line-soft:#1d1c19; }
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0; background:var(--bg); color:var(--ink); font-family:var(--sans);
-  font-size:17px; line-height:1.6; letter-spacing:-.005em; -webkit-font-smoothing:antialiased}
-a{color:inherit}
-.wrap{max-width:920px; margin:0 auto; padding:0 20px}
-.bar{position:sticky; top:0; z-index:9; border-bottom:1px solid var(--line-soft);
-  background:var(--bg)}
-.bar-in{display:flex; align-items:center; gap:16px; height:56px}
-.logo{display:flex; align-items:center; gap:9px; text-decoration:none; font-weight:650;
-  letter-spacing:-.02em; font-size:.98rem}
-.logo .dot{width:9px; height:9px; border-radius:50%; background:var(--c);
-  box-shadow:0 0 0 4px color-mix(in srgb, var(--c) 16%, transparent)}
-.bar nav{margin-left:auto; display:flex; gap:18px; font-size:.82rem; color:var(--muted)}
-.bar nav a{text-decoration:none}
-.bar nav a:hover{color:var(--ink)}
-.hero{margin:36px 0 8px}
-.kicker{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:14px;
-  font-size:.71rem; letter-spacing:.09em; text-transform:uppercase; font-weight:650; color:var(--muted)}
-.pill{display:inline-flex; align-items:center; padding:4px 10px; border-radius:999px;
-  background:color-mix(in srgb, var(--c) 10%, transparent); color:var(--c); text-decoration:none;
-  font-size:.71rem; font-weight:650; letter-spacing:.06em; text-transform:uppercase;
-  border:1px solid color-mix(in srgb, var(--c) 22%, transparent)}
-.pill:hover{background:color-mix(in srgb, var(--c) 18%, transparent)}
-.hero h1{font-size:clamp(1.85rem, 5.2vw, 2.7rem); line-height:1.09; letter-spacing:-.035em;
-  margin:0 0 14px; font-weight:690}
-.hero h1 a{text-decoration:none}
-.hero h1 a:hover{color:var(--c)}
-.hero p.lede{font-size:1.05rem; color:var(--ink-2); margin:0 0 20px; max-width:62ch;
-  font-family:var(--serif); line-height:1.6}
-.cta{display:inline-flex; align-items:center; gap:8px; font-size:.85rem; font-weight:620;
-  text-decoration:none; padding:9px 15px; border-radius:999px; border:1px solid var(--line);
-  background:var(--panel); transition:.16s}
-.cta:hover{border-color:var(--c); color:var(--c); transform:translateY(-1px)}
-.rail{display:flex; gap:8px; overflow-x:auto; padding:24px 0 18px; border-bottom:1px solid var(--line-soft);
-  scrollbar-width:none}
-.rail::-webkit-scrollbar{display:none}
-.rail a{white-space:nowrap; font-size:.79rem; font-weight:620; color:var(--muted);
-  text-decoration:none; padding:6px 12px; border-radius:999px; border:1px solid var(--line)}
-.rail a:hover{color:var(--c); border-color:var(--c)}
-h2.sec{font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted);
-  margin:40px 0 0; font-weight:700}
-.grid{display:grid; gap:1px; background:var(--line); border:1px solid var(--line);
-  border-radius:var(--r); overflow:hidden; margin-top:16px}
-@media (min-width:720px){ .grid{grid-template-columns:1fr 1fr} }
-.card{background:var(--panel); padding:24px 22px 26px; text-decoration:none; display:block;
-  position:relative; transition:background .16s}
-.card:hover{background:color-mix(in srgb, var(--c) 4%, var(--panel))}
-.card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:2px;
-  background:var(--c); opacity:0; transition:opacity .16s}
-.card:hover::before{opacity:1}
-.card .meta{font-size:.69rem; letter-spacing:.09em; text-transform:uppercase; color:var(--muted);
-  font-weight:640; display:flex; gap:8px; align-items:center; margin-bottom:9px}
-.card .meta .d{width:6px; height:6px; border-radius:50%; background:var(--c); flex:none}
-.card h3{margin:0 0 7px; font-size:1.08rem; line-height:1.28; letter-spacing:-.02em; font-weight:650}
-.card p{margin:0; color:var(--muted); font-size:.89rem; line-height:1.5;
-  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
-article.post{max-width:660px; margin:40px auto 0}
-article.post h1{font-size:clamp(1.72rem, 4.6vw, 2.45rem); line-height:1.12;
-  letter-spacing:-.035em; margin:8px 0 14px; font-weight:690}
-article.post .lede{font-family:var(--serif); font-size:1.08rem; color:var(--ink-2);
-  margin:0 0 26px; padding-bottom:24px; border-bottom:1px solid var(--line-soft)}
-.body{font-family:var(--serif); font-size:1.08rem; line-height:1.72; color:var(--ink)}
-.body h2{font-family:var(--sans); font-size:1.22rem; letter-spacing:-.02em; margin:2.3em 0 .5em;
-  font-weight:670; line-height:1.3}
-.body h3{font-family:var(--sans); font-size:1rem; margin:1.8em 0 .4em; font-weight:670}
-.body p{margin:0 0 1.15em}
-.body strong{font-weight:680}
-.body ul,.body ol{margin:0 0 1.25em; padding-left:1.15em}
-.body li{margin:.4em 0}
-.body li::marker{color:var(--c)}
-.body a{color:var(--c); text-decoration:none;
-  border-bottom:1px solid color-mix(in srgb, var(--c) 34%, transparent)}
-.body a:hover{background:color-mix(in srgb, var(--c) 10%, transparent)}
-.body blockquote{margin:1.5em 0; padding:4px 0 4px 18px; border-left:2px solid var(--c);
-  color:var(--ink-2); font-style:italic}
-.body hr{border:0; border-top:1px solid var(--line); margin:2.6em 0}
-.body code{font-family:var(--mono); font-size:.85em; background:var(--line-soft);
-  padding:.12em .38em; border-radius:4px}
-.body img{max-width:100%; border-radius:10px}
-.pager{display:grid; gap:1px; background:var(--line); border:1px solid var(--line);
-  border-radius:var(--r); overflow:hidden; margin:56px 0 0; grid-template-columns:1fr 1fr}
-.pager a{background:var(--panel); padding:16px 18px; text-decoration:none; font-size:.85rem}
-.pager a span{display:block; font-size:.67rem; letter-spacing:.1em; text-transform:uppercase;
-  color:var(--muted); margin-bottom:5px; font-weight:650}
-.pager a strong{font-weight:630; line-height:1.35; display:block}
-.pager a:hover{background:var(--line-soft)}
-.pager a.next{text-align:right}
-footer.site{margin:72px 0 0; border-top:1px solid var(--line-soft); padding:22px 0 60px;
-  font-size:.77rem; color:var(--muted); display:flex; flex-wrap:wrap; gap:10px;
-  justify-content:space-between}
-footer.site a{color:var(--muted); text-decoration:none}
-footer.site a:hover{color:var(--ink)}
+THEME_JS = """
+(function(){try{var t=localStorage.getItem('yab-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+function yabToggle(){var d=document.documentElement;
+  var cur=d.dataset.theme||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var nx=cur==='dark'?'light':'dark';d.dataset.theme=nx;
+  try{localStorage.setItem('yab-theme',nx);}catch(e){}}
 """
+
+TG_ICON = ('<svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+           'stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2'
+           'M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg>'
+           '<svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
+           'stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg>')
 
 
 def slugify(s: str) -> str:
@@ -156,6 +71,10 @@ def theme_of(tags):
         if c:
             return c
     return THEMES["default"]
+
+
+def css_vars(color_pair) -> str:
+    return f"--c:{color_pair[0]};--c2:{color_pair[1]}"
 
 
 def parse_front(text: str):
@@ -186,13 +105,21 @@ def page(title, body, css_vars="", desc=None):
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc or SITE_TAGLINE)}">
 <meta name="color-scheme" content="light dark">
+<meta property="og:title" content="{esc(title)}">
+<meta property="og:description" content="{esc(desc or SITE_TAGLINE)}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%234f46e5'/></svg>">
 <link rel="alternate" type="application/rss+xml" title="{esc(SITE_TITLE)}" href="{SITE_URL}/feed.xml">
-<style>{CSS}</style>
+<link rel="stylesheet" href="{SITE_URL}/style.css">
+<script>{THEME_JS}</script>
 </head>
 <body style="{css_vars}">
 <div class="bar"><div class="wrap bar-in">
-  <a class="logo" href="{SITE_URL}/"><span class="dot"></span>Brief AI</a>
-  <nav><a href="{SITE_URL}/">Arsip</a><a href="{SITE_URL}/feed.xml">RSS</a></nav>
+  <a class="logo" href="{SITE_URL}/"><span class="mark"></span>{esc(SITE_TITLE)}</a>
+  <nav>
+    <a href="{SITE_URL}/">Arsip</a>
+    <a href="{SITE_URL}/feed.xml">RSS</a>
+    <button class="tg" type="button" onclick="yabToggle()" aria-label="Ganti tema terang atau gelap">{TG_ICON}</button>
+  </nav>
 </div></div>
 <div class="wrap">
 {body}
@@ -229,9 +156,8 @@ def load():
 def tag_pills(item, limit=2):
     out = []
     for t in item["tags"][:limit]:
-        c = THEMES.get(t.lower(), THEMES["default"])
-        out.append(f'<a class="pill" style="--c:{c}" href="{SITE_URL}/tag/{slugify(t)}.html">'
-                   f'{esc(t)}</a>')
+        out.append(f'<a class="pill" style="{css_vars(THEMES.get(t.lower(), THEMES["default"]))}" '
+                   f'href="{SITE_URL}/tag/{slugify(t)}.html">{esc(t)}</a>')
     return "".join(out)
 
 
@@ -242,7 +168,7 @@ def card_html(it):
         label = f"Edisi {esc(meta['edisi'])} · {label}"
     tag = it["tags"][0] if it["tags"] else ""
     tagbit = f"<span>{esc(tag)}</span>" if tag else ""
-    return f"""<a class="card" style="--c:{it['color']}" href="{SITE_URL}/{it['slug']}.html">
+    return f"""<a class="card" style="{css_vars(it['color'])}" href="{SITE_URL}/{it['slug']}.html">
 <div class="meta"><span class="d"></span>{tagbit}<span>{label}</span></div>
 <h3>{esc(meta['title'])}</h3>
 <p>{esc(meta.get('ringkas',''))}</p>
@@ -253,6 +179,7 @@ def build():
     if OUT.exists():
         shutil.rmtree(OUT)
     (OUT / "tag").mkdir(parents=True)
+    shutil.copy(STYLE, OUT / "style.css")
     items = load()
 
     for i, it in enumerate(items):
@@ -278,7 +205,7 @@ def build():
 </article>"""
         (OUT / f"{it['slug']}.html").write_text(
             page(f"{meta['title']} — {SITE_TITLE}", body,
-                 css_vars=f"--c:{it['color']}", desc=meta.get("ringkas")),
+                 css_vars=css_vars(it["color"]), desc=meta.get("ringkas")),
             encoding="utf-8")
 
     by_tag = {}
@@ -286,24 +213,25 @@ def build():
         for t in it["tags"]:
             by_tag.setdefault(t, []).append(it)
     for t, group in by_tag.items():
-        c = THEMES.get(t.lower(), THEMES["default"])
-        body = (f'<section class="hero" style="--c:{c}"><div class="kicker"><span>Topik</span></div>'
+        pair = THEMES.get(t.lower(), THEMES["default"])
+        body = (f'<section class="hero" style="{css_vars(pair)}">'
+                f'<div class="kicker"><span>Topik</span></div>'
                 f'<h1>{esc(t)}</h1><p class="lede">{len(group)} tulisan.</p></section>'
                 f'<div class="grid">{"".join(card_html(x) for x in group)}</div>')
         (OUT / "tag" / f"{slugify(t)}.html").write_text(
-            page(f"{t} — {SITE_TITLE}", body, css_vars=f"--c:{c}"), encoding="utf-8")
+            page(f"{t} — {SITE_TITLE}", body, css_vars=css_vars(pair)), encoding="utf-8")
 
     if items:
         top = items[0]
         hero_bits = [human_date(top["date"])]
         if top["meta"].get("edisi"):
             hero_bits.insert(0, f"Edisi {esc(top['meta']['edisi'])}")
-        hero = f"""<section class="hero" style="--c:{top['color']}">
+        hero = f"""<section class="hero" style="{css_vars(top['color'])}">
 <div class="kicker">{tag_pills(top, 2)}<span>{" · ".join(hero_bits)}</span></div>
 <h1><a href="{SITE_URL}/{top['slug']}.html">{esc(top['meta']['title'])}</a></h1>
 <p class="lede">{esc(top['meta'].get('ringkas',''))}</p>
 <a class="cta" href="{SITE_URL}/{top['slug']}.html">Baca edisi ini
-<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
  stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
 </section>"""
         rest = items[1:]
@@ -313,7 +241,7 @@ def build():
         hero = '<section class="hero"><h1>Belum ada edisi</h1></section>'
         grid = ""
     rail = "".join(
-        f'<a style="--c:{THEMES.get(t.lower(), THEMES["default"])}" '
+        f'<a style="{css_vars(THEMES.get(t.lower(), THEMES["default"]))}" '
         f'href="{SITE_URL}/tag/{slugify(t)}.html">{esc(t)}</a>'
         for t in sorted(by_tag, key=lambda x: (-len(by_tag[x]), x)))
     rail = f'<div class="rail">{rail}</div>' if rail else ""

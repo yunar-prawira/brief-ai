@@ -20,8 +20,8 @@ else
   echo "tidak ada perubahan untuk di-commit"
 fi
 
-# file post terbaru yang harus bisa diakses di internet
-NEWEST=$(ls -t docs/*.html | grep -v '/index.html' | head -1 | xargs basename)
+# file post terbaru (nama file = tanggal + edisi, jadi urut lexicographic = urut waktu)
+NEWEST=$(ls docs/*.html | grep -v '/index.html' | sort | tail -1 | xargs basename)
 for i in $(seq 1 30); do
   code=$(curl -s -o /dev/null -w "%{http_code}" "$SITE/$NEWEST")
   if [ "$code" = "200" ]; then
