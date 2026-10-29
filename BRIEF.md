@@ -55,8 +55,12 @@ benar-benar menyajikan commit tersebut, dan mencetak URL `LIVE`. Kalau keluar
 
 - Jangan mengarang fakta, angka, kutipan, atau tanggal. Sumber tipis = edisi lebih pendek.
 - Rotasi topik: tiap edisi minimal 2 item AI/teknologi, maksimal 1 item politik (dan ringan).
-- Sisipkan topik minat Yunar secara alami: Manchester United, HR/payroll, SaaS & pricing,
-  product build, Indonesia, sepak bola. Jangan dipaksakan kalau tidak ada berita.
+- **Topik minat selalu lewat kacamata AI.** Untuk Manchester United, HR/payroll, SaaS & pricing,
+  product build, Indonesia, dan politik: yang dicari adalah bagaimana AI dikembangkan atau
+  dimanfaatkan di domain itu — model data/scouting di sepak bola, AI di rekrutmen & payroll,
+  AI dalam pricing/produk SaaS, agentic coding & tools build, kebijakan dan adopsi AI di
+  Indonesia, politik regulasi AI. Berita cedera pemain, jadwal klub, atau politik umum tanpa
+  kaitan AI = tidak masuk. Tidak ada sudut AI yang nyata? Lewati topiknya.
 - Hindari cerita yang sudah dipakai: cek `log/seen.json` dan 3 post terakhir.
 - Tanpa buzzword ("revolusioner", "game changer"). Angka > adjektiva.
 
