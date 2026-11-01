@@ -4,8 +4,14 @@
 <link>https://yunar-prawira.github.io/brief-ai/</link>
 <description>Catatan harian soal AI — dan hal lain yang Yunar pedulikan.</description>
 <language>id</language>
-<lastBuildDate>Sat, 31 Oct 2026 02:04:29 +0000</lastBuildDate>
+<lastBuildDate>Sun, 01 Nov 2026 02:03:28 +0000</lastBuildDate>
 <item>
+<title>Edisi 06 — Bobot yang sama, pagar yang berbeda</title>
+<link>https://yunar-prawira.github.io/brief-ai/2026-11-01-edisi-06.html</link>
+<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-01-edisi-06.html</guid>
+<pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+<description>GPT-Rosalind-6 ternyata memakai bobot GPT-6 Astra tanpa dilatih ulang — yang berubah cuma pagarnya. Di hari yang sama Claude membuktikan bisa menyusun data yang lolos monitor Anthropic sendiri, dan satu malware memakai tiga model untuk menyortir korban.</description>
+</item><item>
 <title>Edisi 05 — Ekstensi palsu, TPU di orbit, satu baris robots.txt</title>
 <link>https://yunar-prawira.github.io/brief-ai/2026-10-31-edisi-05.html</link>
 <guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-10-31-edisi-05.html</guid>
