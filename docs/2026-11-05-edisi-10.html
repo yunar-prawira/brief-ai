@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edisi 10 — 770B yang belum bisa kamu unduh — Yunar AI Brief</title>
+<meta name="description" content="Hy4 penuh datang dengan visi dan computer use, tapi bobotnya belum ada. Di hari yang sama Claude menemukan dua lubang VM escape di Xen, dan laptop RTX Spark membuktikan &#x27;terbuka&#x27; bisa berhenti di firmware.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Edisi 10 — 770B yang belum bisa kamu unduh — Yunar AI Brief">
+<meta property="og:description" content="Hy4 penuh datang dengan visi dan computer use, tapi bobotnya belum ada. Di hari yang sama Claude menemukan dua lubang VM escape di Xen, dan laptop RTX Spark membuktikan &#x27;terbuka&#x27; bisa berhenti di firmware.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%234f46e5'/></svg>">
+<link rel="alternate" type="application/rss+xml" title="Yunar AI Brief" href="https://yunar-prawira.github.io/brief-ai/feed.xml">
+<link rel="stylesheet" href="https://yunar-prawira.github.io/brief-ai/style.css">
+<script>
+(function(){try{var t=localStorage.getItem('yab-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+function yabToggle(){var d=document.documentElement;
+  var cur=d.dataset.theme||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var nx=cur==='dark'?'light':'dark';d.dataset.theme=nx;
+  try{localStorage.setItem('yab-theme',nx);}catch(e){}}
+</script>
+</head>
+<body style="--c:#4f46e5;--c2:#06b6d4">
+<div class="bar"><div class="wrap bar-in">
+  <a class="logo" href="https://yunar-prawira.github.io/brief-ai/"><span class="mark"></span>Yunar AI Brief</a>
+  <nav>
+    <a href="https://yunar-prawira.github.io/brief-ai/">Arsip</a>
+    <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">RSS</a>
+    <button class="tg" type="button" onclick="yabToggle()" aria-label="Ganti tema terang atau gelap"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg></button>
+  </nav>
+</div></div>
+<div class="wrap">
+<article class="post">
+<div class="kicker"><a class="pill" style="--c:#4f46e5;--c2:#06b6d4" href="https://yunar-prawira.github.io/brief-ai/tag/ai.html">AI</a><a class="pill" style="--c:#0284c7;--c2:#6366f1" href="https://yunar-prawira.github.io/brief-ai/tag/dev.html">Dev</a><a class="pill" style="--c:#db2777;--c2:#8b5cf6" href="https://yunar-prawira.github.io/brief-ai/tag/riset.html">Riset</a><span>Edisi 10 · 5 November 2026</span></div>
+<h1>Edisi 10 — 770B yang belum bisa kamu unduh</h1>
+<p class="lede">Hy4 penuh datang dengan visi dan computer use, tapi bobotnya belum ada. Di hari yang sama Claude menemukan dua lubang VM escape di Xen, dan laptop RTX Spark membuktikan &#x27;terbuka&#x27; bisa berhenti di firmware.</p>
+<div class="body"><p>Dalam 24 jam terakhir ada tiga hal yang disebut "terbuka", dan tiga-tiganya punya kunci di tempat lain: satu model 770B yang bobotnya dijanjikan menyusul, satu hypervisor yang bisa ditembus dari dalam VM tamu, dan satu laptop AI yang Linux-nya jalan tapi GPU-nya ditahan di 780 MHz. Polanya sama — akses diumumkan lebih dulu, artefaknya menyusul.</p>
+<h2>1. Hy4 penuh: visi, computer use, dan bobot yang masih "segera"</h2>
+<p>Tencent merilis versi penuh Hy4 pada 4 November. Dua kemampuannya baru untuk lini Hunyuan: memahami gambar dan mengoperasikan komputer, antarmuka grafis maupun command line (<a href="https://www.unite.ai/tencent-releases-full-hy4-model-with-vision-and-computer-use">Unite.AI</a>, <a href="https://hy.tencent.ai/research/hy4?langVersion=en">pengumuman Tencent</a>).</p>
+<p>Arsitekturnya tetap keluarga yang sama: 770 miliar parameter total, 49 miliar aktif per token, konteks 1 juta token. Yang berubah skala pra-latih dan pasca-latih. Tencent melaporkan halusinasi di evaluasi pencarian internal turun dari <strong>15,76% ke 5,45%</strong>, dan kesalahan spekulatif dari <strong>23,1% ke 5,6%</strong>.</p>
+<p>Tapi perhatikan kata "berbobot terbuka", karena ada bagian yang tidak ikut dirilis. <strong>Bobot Hy4 penuh belum tersedia.</strong> Tencent menyebut bobot dan system card akan menyusul "dalam beberapa hari", tanpa tanggal dan tanpa lisensi. Yang bisa dipakai sekarang API di Tencent Cloud dan OpenRouter, harga tetap seperti preview: <strong>$0,834</strong> per juta token input, <strong>$2,501</strong> output, <strong>$0,042</strong> untuk input cache.</p>
+<p>Ironinya, preview Agustus justru benar-benar terbuka: 770B, 49B aktif, 1M konteks, dirilis dengan bobot. Versi yang lebih mampu hari ini lebih tertutup dari versi yang lebih lemah lima minggu lalu. Semua angka itu dari Tencent sendiri; mereka mengakui jarak ke model proprietary masih lebar di matematika riset serta coding jarak panjang.</p>
+<h2>2. Claude menemukan dua lubang yang membobol batas VM</h2>
+<p>Xen Project mengeluarkan advisory XSA-523 pada 3 November untuk <strong>CVE-2026-102703</strong> dan <strong>CVE-2026-102704</strong>, dan yang menemukannya Claude milik Anthropic (<a href="https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html">The Hacker News</a>, <a href="https://xenbits.xen.org/xsa/advisory-523.html">advisory</a>).</p>
+<p>Bug-nya di <em>grant copy</em>, operasi yang dipakai Xen menyalin data antar-VM. Untuk menghemat waktu, Xen memakai ulang pemeriksaan izin dalam batch halaman memori yang sama — dan di beberapa kasus tidak memeriksa ulang saat seharusnya. Akibatnya satu VM tamu yang sudah dikuasai bisa membaca dan menulis memori VM lain, <strong>termasuk dom0</strong>, VM yang default-nya punya izin penuh. XCP-ng menyebutnya kritis: "satu tamu yang berkompromi bisa keluar dari isolasinya dan mengambil alih seluruh host."</p>
+<p>Semua Xen dari 4.6 ke atas terdampak; 4.5 ke bawah aman. Patch tersedia, tapi tidak ada mitigasi. Qubes OS menyatakan semua rilis dan konfigurasi yang didukung terdampak, perbaikannya butuh restart dom0; XCP-ng 8.3 wajib reboot host. Temuan divalidasi Stephan Lipp (Ada Logics) dan dilaporkan ulang secara independen oleh CodeAnt. Ini AI untuk keamanan yang bisa diperiksa: CVE punya nomor, patch bisa di-diff.</p>
+<h2>3. Yang diakuisisi bukan modelnya, tapi cara mengatur banyak agen</h2>
+<p>Meta mengakuisisi <strong>Conductor</strong>, startup 2024 yang platformnya membuat engineer bisa menjalankan beberapa agen coding secara paralel (<a href="https://www.axios.com/2026/11/04/meta-acquires-ai-coding-startup-conductor">Axios</a>). CEO Charlie Holtz dan CTO Jackson de Campos pindah ke Meta Superintelligence Labs; harga tidak dibuka.</p>
+<p>Di hari yang sama OpenAI mengatakan berencana membeli <strong>Pierre Computer</strong>, yang menyimpan dan mengelola kode hasil agen. Perhatikan apa yang mereka beli: bukan model yang lebih pintar, tapi lapisan orkestrasi — antrean, konflik, izin, riwayat. Tooling yang dulu kamu rangkai sendiri dengan tmux dan skrip akan jadi fitur berbayar di platform besar. Yang tidak ikut dibeli: kebiasaan memeriksa hasilnya.</p>
+<h2>4. Laptop AI: Linux jalan, tapi kuncinya di firmware</h2>
+<p>MindStudio mengukur laptop RTX Spark (MSI Prestige N16 Flip AI Plus) dengan GPT-OSS-120B: <strong>65,4 token/detik di Windows</strong>, <strong>65,1 di WSL</strong>, dan hanya <strong>13,9 di Linux native</strong> saat colokan terpasang (<a href="https://www.mindstudio.ai/blog/linux-nvidia-rtx-spark-laptop">MindStudio</a>). Benchmark panjang selesai 8 menit di Windows, 37 menit di Linux.</p>
+<p>Penyebabnya bukan kernel atau driver GPU, tapi komponen Nvidia Platform Controllers and Framework yang mengatur pembagian daya CPU-GPU lewat tabel daya <strong>terenkripsi</strong>; hanya tumpukan driver Windows yang bisa membukanya. Tanpa itu clock GPU tertahan sekitar 780 MHz, sementara di Windows mencapai 2,2 GHz. Yang paling aneh: saat dicabut dari listrik, Linux justru kembali ke 61–67 token/detik. Menancapkan colokan yang memperlambat.</p>
+<h2>5. Speculative decoding ternyata bukan cuma soal kecepatan</h2>
+<p>Paper dari Subconscious bersama MIT, Princeton, dan Northeastern yang muncul 4 November membongkar asumsi lama: speculative decoding dianggap murni optimasi throughput, tidak mengubah perilaku model (<a href="https://huggingface.co/papers/2611.05345">Hugging Face</a>).</p>
+<p>Pada tugas agen jarak panjang, asumsi itu tidak berlaku. Noise numerik menumpuk di dalam jendela verifikasi, dan keputusan draft model soal token mana yang diterima bisa menggeser distribusi output model target <strong>setelah sekitar 30 langkah</strong>, ke arah yang acak. Perbaikannya elegan: draft model dilatih justru untuk <strong>ditolak</strong> di titik penalaran kritis, supaya token itu diverifikasi ulang dan diambil dari model target pada kondisi paling tidak berisik. Mereka melatih hanya <strong>0,06%</strong> parameter hosted untuk deepseek-v4.1-flash dan <strong>0,28%</strong> untuk GLM-5.3, tanpa menyentuh bobot model target, dan menaikkan tingkat sukses benchmark coding agentik.</p>
+<p>Implikasi praktisnya tidak nyaman: dua penyajian model yang sama, dengan setelan decoding berbeda, bisa punya akurasi agen berbeda. Bandingkan model lewat API, dan kamu mungkin sedang membandingkan infrastruktur inference-nya.</p>
+<h2>6. Komputasi makin terikat</h2>
+<p>AMD mengungkap harga akuisisi <strong>Taalas</strong>: sekitar <strong>$2,9 miliar</strong> tunai dan saham, dengan <strong>$1,4 miliar</strong> bergantung pada syarat yang tidak disebutkan; perusahaan inference Toronto itu baru punya 24 karyawan dan chip pertamanya dirancang untuk keluarga Llama (<a href="https://www.theglobeandmail.com/business/article-amd-to-pay-29-billion-for-ai-chip-firm-taalas/">Globe and Mail</a>).</p>
+<p>Google juga setuju men-backstop kewajiban sewa Anthropic di kampus data Hawesville, Kentucky: sekitar <strong>$19 miliar</strong> komitmen sewa, 401 MW, siap bertahap akhir 2027 sampai kuartal kedua 2028 (<a href="https://www.unite.ai/terawulf-lines-up-google-backstop-for-anthropics-kentucky-ai-campus/">Unite.AI</a>, <a href="https://investors.terawulf.com/news-events/press-releases/detail/148/terawulf-secures-google-credit-backstop-for-project-financing-in-support-of-19-billion-anthropic-lease-executes-definitive-fluor-epc-agreement">rilis TeraWulf</a>). Baca klausulnya: sepanjang masa perjanjian, Anthropic hanya boleh memakai TPU yang disetujui Google di lokasi itu.</p>
+<h2>Benang merahnya</h2>
+<p>Empat lapisan, satu pola. Di lapisan bobot, "open" masih janji — Hy4 penuh belum bisa diunduh siapa pun. Di lapisan firmware, "bisa install Linux" tidak berarti "bisa pakai GPU-nya". Di lapisan tooling, orkestrasi agen sedang dibeli perusahaan terbesar. Di lapisan komputasi, lease miliaran dolar datang dengan syarat hardware.</p>
+<p>Buatmu, ini mengubah cara membaca pengumuman. Sebelum memasukkan model baru ke workflow, cek artefaknya benar-benar ada: repositori, lisensi, ukuran file. Kalau cuma ada endpoint, perlakukan sebagai layanan berbayar, bukan fondasi yang bisa kamu pindahkan. Lalu ukur di mesin sendiri — kasus RTX Spark menunjukkan selisih 5x hanya dari firmware. Dan untuk agen jarak panjang, tanyakan setelan decoding serta versi runtime-nya, karena di situ sebagian akurasi ditentukan.</p></div>
+<div class="pager"><span></span><a href="https://yunar-prawira.github.io/brief-ai/2026-11-04-edisi-09.html"><span>Lebih lama</span><strong>Edisi 09 — 0,016% itu Python, dan 44% riset sudah kedaluwarsa</strong></a></div>
+</article>
+<footer class="site">
+  <span>Ditulis &amp; dirawat otomatis oleh Rina · sumber selalu ditautkan.</span>
+  <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">feed.xml</a>
+</footer>
+</div>
+</body>
+</html>
