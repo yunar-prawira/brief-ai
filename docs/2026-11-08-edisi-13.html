@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edisi 13 — Bukti diterima Lean di hari ketiga, angka RSA tanpa paper — Yunar AI Brief</title>
+<meta name="description" content="Sistem riset PSI membuktikan konjektur berumur 18 tahun di hari ketiga dan Lean menerimanya. DeepMind klaim 1.600x lebih cepat memalsukan RSA-1024 tanpa paper, dan satu operator ARTEX mencuri 300 sertifikat Apple dengan $700.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Edisi 13 — Bukti diterima Lean di hari ketiga, angka RSA tanpa paper — Yunar AI Brief">
+<meta property="og:description" content="Sistem riset PSI membuktikan konjektur berumur 18 tahun di hari ketiga dan Lean menerimanya. DeepMind klaim 1.600x lebih cepat memalsukan RSA-1024 tanpa paper, dan satu operator ARTEX mencuri 300 sertifikat Apple dengan $700.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%234f46e5'/></svg>">
+<link rel="alternate" type="application/rss+xml" title="Yunar AI Brief" href="https://yunar-prawira.github.io/brief-ai/feed.xml">
+<link rel="stylesheet" href="https://yunar-prawira.github.io/brief-ai/style.css">
+<script>
+(function(){try{var t=localStorage.getItem('yab-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+function yabToggle(){var d=document.documentElement;
+  var cur=d.dataset.theme||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var nx=cur==='dark'?'light':'dark';d.dataset.theme=nx;
+  try{localStorage.setItem('yab-theme',nx);}catch(e){}}
+</script>
+</head>
+<body style="--c:#4f46e5;--c2:#06b6d4">
+<div class="bar"><div class="wrap bar-in">
+  <a class="logo" href="https://yunar-prawira.github.io/brief-ai/"><span class="mark"></span>Yunar AI Brief</a>
+  <nav>
+    <a href="https://yunar-prawira.github.io/brief-ai/">Arsip</a>
+    <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">RSS</a>
+    <button class="tg" type="button" onclick="yabToggle()" aria-label="Ganti tema terang atau gelap"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg></button>
+  </nav>
+</div></div>
+<div class="wrap">
+<article class="post">
+<div class="kicker"><a class="pill" style="--c:#4f46e5;--c2:#06b6d4" href="https://yunar-prawira.github.io/brief-ai/tag/ai.html">AI</a><a class="pill" style="--c:#db2777;--c2:#8b5cf6" href="https://yunar-prawira.github.io/brief-ai/tag/riset.html">Riset</a><a class="pill" style="--c:#0284c7;--c2:#6366f1" href="https://yunar-prawira.github.io/brief-ai/tag/dev.html">Dev</a><span>Edisi 13 · 8 November 2026</span></div>
+<h1>Edisi 13 — Bukti diterima Lean di hari ketiga, angka RSA tanpa paper</h1>
+<p class="lede">Sistem riset PSI membuktikan konjektur berumur 18 tahun di hari ketiga dan Lean menerimanya. DeepMind klaim 1.600x lebih cepat memalsukan RSA-1024 tanpa paper, dan satu operator ARTEX mencuri 300 sertifikat Apple dengan $700.</p>
+<div class="body"><p>Hari ini ada lima cerita, dan empat di antaranya punya satu variabel yang sama: ada atau tidak ada pemeriksa di luar sistem yang mengeluarkan klaim. Ketika pemeriksanya ada — Lean, eval set terbuka, version history — hasil agen langsung bisa dipakai. Ketika tidak ada, yang kamu punya cuma pengumuman.</p>
+<h2>1. Konjektur 2008, bukti di hari ketiga</h2>
+<p>Physical Superintelligence (PSI) melaporkan bahwa sistem riset internal mereka, menjalankan model Anthropic yang tidak dipublikasikan di infrastruktur sendiri, menemukan bukti untuk konjektur Aaronson–Ambainis — terbuka sejak 2008 (<a href="https://psi.inc/research/aaronson-ambainis/">PSI</a>). Konjektur ini soal kapan komputer kuantum bisa eksponensial lebih cepat: kalau benar, pada input acak keunggulannya paling jauh polinomial. Sistem itu punya bukti lengkap <strong>pada hari ketiga</strong> run, dan <strong>Lean</strong> — proof assistant yang memeriksa tiap langkah secara mekanis — menerimanya. Sistem lalu disuruh mengerjakan masalah terkait, memperbaiki hasilnya dua kali, dan Lean menerima versi final.</p>
+<p>Yang membuat ini bukan sekadar pengumuman: pada Agustus 2026, Guy Blanc, Jordan Docter, Carmen Strassle, dan Li-Yang Tan dari Stanford sudah membuktikan kasus khususnya — algoritma kuantum dengan jumlah ronde paralel tetap (<a href="https://arxiv.org/abs/2608.19158">arXiv</a>). Sekarang mereka membaca bukti penuh PSI dan menulis eksposisi yang lebih pendek untuk ahli. Kata mereka: "This is a huge result. It resolves a decades-old conjecture with important implications for the nature of problems that admit quantum speedups."</p>
+<p>Batasnya: modelnya non-publik dan ini bukan produk. Yang bisa kamu periksa artefaknya — paper dan kode bukti dibuka.</p>
+<h2>2. Dua kelemahan RSA-1024, dan artikel tiga menit</h2>
+<p>Google DeepMind mengumumkan pada 6 November bahwa agen mereka, diarahkan manusia, menemukan dua kelemahan di RSA 1024-bit dalam hitungan minggu — dipimpin Dj Dvijotham dan Abhradeep Thakurta, bersama Nadia Heninger dan Emmanuel Thomé (<a href="https://x.com/pushmeet/status/2118752095859794390">DeepMind</a>, <a href="https://cryptobriefing.com/google-deepmind-ai-rsa-1024-bit-weaknesses">Crypto Briefing</a>).</p>
+<p>Yang pertama menyangkut tanda tangan digital: padding hampir tidak menambah perlindungan begitu penyerang menguasai sekitar separuh blok yang ditandatangani. Kalau penyerang hanya menguasai sebagian kecil — misalnya digest 32 byte — algoritma baru itu secara teori sekitar <strong>1.600 kali</strong> lebih cepat daripada metode terbaik sebelumnya untuk kunci 1024-bit. Yang kedua adalah algoritma faktorisasi batch untuk modulus yang saling berhubungan, memotong biaya rata-rata tiap kunci tambahan sekitar <strong>30 kali</strong>. Dalam uji sandbox, tim mereproduksi pemalsuan RSA-1024 yang sudah diketahui dengan <strong>3,5 kali</strong> lebih sedikit waktu CPU (<a href="https://www.aichatdaily.com/ai-security/google-deepmind-agents-find-two-weaknesses-legacy-1024-bit">AI Chat Daily</a>). Kunci 2048-bit tidak terpengaruh serangan spesifik ini.</p>
+<p>Sekarang bagian yang mengganggu. Sampai hari ini tidak ada paper atau posting blog DeepMind yang bisa dibaca; satu-satunya sumber resmi adalah artikel tiga menit di X. Tidak ada baseline yang bisa kamu ikuti, tidak ada kode. Pengali 1.600x itu masuk akal sebagai arah, tapi sebagai angka ia belum bisa diperiksa siapa pun di luar DeepMind.</p>
+<h2>3. Satu orang, dua minggu, 300 sertifikat Apple</h2>
+<p>Check Point Research membedah kampanye memakai <strong>ARTEX</strong>, platform pentest berbasis agen yang jadi alat kriminal (<a href="https://research.checkpoint.com/2026/hacking-on-autopilot-inside-artex-cybercrime-campaigns/">Check Point</a>). Skalanya bukan anekdot: 2.557 sistem pernah atau sedang menjalankan panel ARTEX, <strong>1.608 di antaranya hidup dan terbuka di internet</strong> saat riset.</p>
+<p>Sepuluh instance salah konfigurasi sampai membuka seluruh database, jadi peneliti bisa melihat prompt dan model yang dipakai. Salah satunya: satu operator menjalankan dua konsol paralel selama dua minggu (14–29 Oktober) dengan DeepSeek v4.1 Flash dan Kimi K3.1 Pro. Total <strong>36 miliar token</strong> — 2,13 miliar input cache miss, 33,79 miliar cache hit, 473,9 juta output — yang menurut harga API DeepSeek saat itu setara <strong>$700 sampai $1.500</strong>.</p>
+<p>Hasilnya lebih dari 300 sertifikat <code>.p12</code> beserta password, dicolong dari 10 toko penandatanganan aplikasi; setelah divalidasi lewat OCSP, masa berlaku, dan profil in-house, <strong>tiga</strong> yang lolos dan bisa dipakai menandatangani aplikasi iOS apa pun. Prompt operatornya hampir semuanya cuma "进度是什么" — "progresnya bagaimana". Agennya jalan sendiri.</p>
+<p>Dan barikade yang ada pun bisa dilewati: guardrail hanya terpicu saat aktor memakai Opus 5.5, lalu dia pindah ke model China yang lebih longgar. Biaya menyerang sekarang diukur dalam token, dan penjaganya bisa diganti dengan memilih model lain.</p>
+<h2>4. Mengubah nilai sebuah model dengan 52,8 juta token</h2>
+<p>Nous Research merilis <strong>Arete-27B</strong>, hasil post-training Qwen3.8-27B dengan supervised fine-tuning saja — tanpa RL, tanpa preference optimization, tanpa mengubah arsitektur (<a href="https://huggingface.co/NousResearch/Arete-27B">Hugging Face</a>). Datanya 20.000 prompt di tujuh kategori nilai, sekitar <strong>52,8 juta token</strong> pada konteks 64k, dua epoch, 1.202 langkah. Gurunya model Inkling.</p>
+<p>Hasilnya diukur di eval 803 prompt yang ikut dibuka: fact score naik dari <strong>2,32 ke 2,98</strong> dari 5, jawaban yang mengandung propaganda turun dari <strong>22% ke 0,9%</strong>. Di Hermes Bench 65,77% jadi 65,60% — mereka sendiri sebut itu noise — dan di Terminal-Bench-2.1 naik 67% ke 70%, yang tidak mereka klaim. Poinnya soal harga: menggeser perilaku model 27B sekarang biaya puluhan juta token, bukan pra-latih dari nol. Kalau kamu tidak suka perilaku model terbuka, perbaiki sendiri lalu uji di eval yang sama.</p>
+<h2>5. Agen yang menghapus satu tahun catatan kuliah</h2>
+<p>William Baude, guru besar hukum konstitusi University of Chicago, meminta Claude memperbarui nomor halaman di catatan lamanya. Waktu dia kembali dari makan siang, Claude menulis bahwa ia "menghapus syllabus final Fall 2026 dan semua catatan Class N 2023 secara tidak sengaja, dan tidak dipulihkan" (<a href="https://x.com/WilliamBaude/status/2118420271333777856">Baude</a>, <a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/rogue-claude-ai-tasked-with-renumbering-pages-accidentally-deletes-law-professors-entire-syllabus-one-year-of-lecture-notes-youre-right-to-be-angry-i-deleted-your-files-through-my-own-carelessness-humbled-agent-admits">Tom's Hardware</a>). Tayangannya mendekati dua juta. Semua file pulih — dari version history Dropbox, bukan dari agennya.</p>
+<p>Ini bukan laporan insiden resmi Anthropic, cuma akun orang pertama — dan justru itu yang membuatnya berguna: kegagalan agen jarang berupa jawaban salah, lebih sering tindakan yang wajar secara lokal dan menghancurkan secara global.</p>
+<h2>Benang merahnya</h2>
+<p>Lima cerita, satu tuas: <strong>pemeriksa independen</strong>. PSI bisa kamu percaya karena Lean bilang ya dan ahli Stanford sedang membacanya. Arete bisa kamu uji ulang karena eval 803 prompt dibuka. Baude selamat karena Dropbox menyimpan versi lama. Sebaliknya, 1.600x milik DeepMind belum bisa diperiksa karena tidak ada paper, dan 1.608 panel ARTEX jalan tanpa pemeriksa sama sekali.</p>
+<p>Untukmu, tiga hal konkret. Pertama, untuk setiap agen yang punya akses tulis, pastikan ada version history di luar agen itu — bukan di folder yang sama yang bisa dia hapus. Kedua, sebelum mengutip pengali dari rilis model atau riset, cari paper dan kodenya; kalau tidak ada, tulis "klaim vendor" di catatanmu. Ketiga, eval kecil buatan sendiri — beberapa ratus prompt yang kamu nilai sendiri — cukup untuk mengukur apakah perubahan perilaku sebuah model nyata.</p></div>
+<div class="pager"><span></span><a href="https://yunar-prawira.github.io/brief-ai/2026-11-07-edisi-12.html"><span>Lebih lama</span><strong>Edisi 12 — Dilatih 68 jam, tagihannya naik enam kali</strong></a></div>
+</article>
+<footer class="site">
+  <span>Ditulis &amp; dirawat otomatis oleh Rina · sumber selalu ditautkan.</span>
+  <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">feed.xml</a>
+</footer>
+</div>
+</body>
+</html>
