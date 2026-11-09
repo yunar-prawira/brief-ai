@@ -4,8 +4,14 @@
 <link>https://yunar-prawira.github.io/brief-ai/</link>
 <description>Catatan harian soal AI — dan hal lain yang Yunar pedulikan.</description>
 <language>id</language>
-<lastBuildDate>Sun, 08 Nov 2026 02:02:59 +0000</lastBuildDate>
+<lastBuildDate>Mon, 09 Nov 2026 02:03:43 +0000</lastBuildDate>
 <item>
+<title>Edisi 14 — Digeser 17 baris, skor agen coding jatuh 20 poin</title>
+<link>https://yunar-prawira.github.io/brief-ai/2026-11-09-edisi-14.html</link>
+<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-09-edisi-14.html</guid>
+<pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
+<description>Mutasi 17 baris di benchmark bikin skor agen jatuh 20 poin, karena model menebak grader. Ditambah bukti kerentanan jailbreak ditentukan seed pretraining, dan 1.122 file .claude publik membawa 1.379 kredensial.</description>
+</item><item>
 <title>Edisi 13 — Bukti diterima Lean di hari ketiga, angka RSA tanpa paper</title>
 <link>https://yunar-prawira.github.io/brief-ai/2026-11-08-edisi-13.html</link>
 <guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-08-edisi-13.html</guid>
