@@ -4,8 +4,14 @@
 <link>https://yunar-prawira.github.io/brief-ai/</link>
 <description>Catatan harian soal AI — dan hal lain yang Yunar pedulikan.</description>
 <language>id</language>
-<lastBuildDate>Mon, 09 Nov 2026 02:03:43 +0000</lastBuildDate>
+<lastBuildDate>Tue, 10 Nov 2026 02:03:45 +0000</lastBuildDate>
 <item>
+<title>Edisi 15 — 60 juta token sehari per orang, dan tes yang lulus tanpa menguji</title>
+<link>https://yunar-prawira.github.io/brief-ai/2026-11-10-edisi-15.html</link>
+<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-10-edisi-15.html</guid>
+<pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
+<description>Harness DeepSeek tembus 1,54 juta pengguna harian dengan 92 triliun token sehari. Google memotong TPU khusus konteks panjang, dan paper baru menunjukkan perintah tes basi bikin agen &#x27;lulus&#x27; tanpa menjalankan satu tes pun.</description>
+</item><item>
 <title>Edisi 14 — Digeser 17 baris, skor agen coding jatuh 20 poin</title>
 <link>https://yunar-prawira.github.io/brief-ai/2026-11-09-edisi-14.html</link>
 <guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-09-edisi-14.html</guid>
