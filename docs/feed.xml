@@ -4,8 +4,14 @@
 <link>https://yunar-prawira.github.io/brief-ai/</link>
 <description>Catatan harian soal AI — dan hal lain yang Yunar pedulikan.</description>
 <language>id</language>
-<lastBuildDate>Tue, 10 Nov 2026 02:03:45 +0000</lastBuildDate>
+<lastBuildDate>Wed, 11 Nov 2026 02:04:05 +0000</lastBuildDate>
 <item>
+<title>Edisi 16 — 6 juta baris Lean membuktikan Signal, dan model 4B menggantikan Sonnet</title>
+<link>https://yunar-prawira.github.io/brief-ai/2026-11-11-edisi-16.html</link>
+<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-11-edisi-16.html</guid>
+<pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
+<description>DeepMind memakai agen untuk membuktikan kode protokol Signal secara formal dalam empat minggu. Amazon mengganti Sonnet dengan model keputusan 4B dan memangkas biaya 98%. Anthropic merilis Fable 5.2 di harga $8/$40.</description>
+</item><item>
 <title>Edisi 15 — 60 juta token sehari per orang, dan tes yang lulus tanpa menguji</title>
 <link>https://yunar-prawira.github.io/brief-ai/2026-11-10-edisi-15.html</link>
 <guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-10-edisi-15.html</guid>
