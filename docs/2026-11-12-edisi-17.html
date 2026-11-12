@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edisi 17 — 37.966 temuan, 217 perbaikan, dan bukti yang tidak bisa diperiksa model — Yunar AI Brief</title>
+<meta name="description" content="Glasswing mencatat 37.966 temuan tapi baru 217 yang diperbaiki, dan curl menolak 19 dari 34 laporan. Backdoor cukup lewat sepuluh neuron, AlphaGenome 2 membaca DNA per jenis sel, ChatGPT mulai menjual verifikasi.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Edisi 17 — 37.966 temuan, 217 perbaikan, dan bukti yang tidak bisa diperiksa model — Yunar AI Brief">
+<meta property="og:description" content="Glasswing mencatat 37.966 temuan tapi baru 217 yang diperbaiki, dan curl menolak 19 dari 34 laporan. Backdoor cukup lewat sepuluh neuron, AlphaGenome 2 membaca DNA per jenis sel, ChatGPT mulai menjual verifikasi.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%234f46e5'/></svg>">
+<link rel="alternate" type="application/rss+xml" title="Yunar AI Brief" href="https://yunar-prawira.github.io/brief-ai/feed.xml">
+<link rel="stylesheet" href="https://yunar-prawira.github.io/brief-ai/style.css">
+<script>
+(function(){try{var t=localStorage.getItem('yab-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+function yabToggle(){var d=document.documentElement;
+  var cur=d.dataset.theme||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var nx=cur==='dark'?'light':'dark';d.dataset.theme=nx;
+  try{localStorage.setItem('yab-theme',nx);}catch(e){}}
+</script>
+</head>
+<body style="--c:#4f46e5;--c2:#06b6d4">
+<div class="bar"><div class="wrap bar-in">
+  <a class="logo" href="https://yunar-prawira.github.io/brief-ai/"><span class="mark"></span>Yunar AI Brief</a>
+  <nav>
+    <a href="https://yunar-prawira.github.io/brief-ai/">Arsip</a>
+    <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">RSS</a>
+    <button class="tg" type="button" onclick="yabToggle()" aria-label="Ganti tema terang atau gelap"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg></button>
+  </nav>
+</div></div>
+<div class="wrap">
+<article class="post">
+<div class="kicker"><a class="pill" style="--c:#4f46e5;--c2:#06b6d4" href="https://yunar-prawira.github.io/brief-ai/tag/ai.html">AI</a><a class="pill" style="--c:#0284c7;--c2:#6366f1" href="https://yunar-prawira.github.io/brief-ai/tag/dev.html">Dev</a><a class="pill" style="--c:#7c3aed;--c2:#ec4899" href="https://yunar-prawira.github.io/brief-ai/tag/saas.html">SaaS</a><span>Edisi 17 · 12 November 2026</span></div>
+<h1>Edisi 17 — 37.966 temuan, 217 perbaikan, dan bukti yang tidak bisa diperiksa model</h1>
+<p class="lede">Glasswing mencatat 37.966 temuan tapi baru 217 yang diperbaiki, dan curl menolak 19 dari 34 laporan. Backdoor cukup lewat sepuluh neuron, AlphaGenome 2 membaca DNA per jenis sel, ChatGPT mulai menjual verifikasi.</p>
+<div class="body"><p>Hari ini tidak ada model baru yang menggeser peringkat. Yang ada empat cerita soal hal yang lebih membosankan dan lebih menentukan: memastikan bahwa yang dihasilkan model itu benar. Soal antrean temuan keamanan, DNA yang dibaca per jenis sel, backdoor yang lolos semua uji perilaku, dan ChatGPT yang mulai menjual status terverifikasi.</p>
+<h2>1. 37.966 temuan, 217 perbaikan</h2>
+<p>VulnCheck menerbitkan hitungan tujuh bulan untuk Project Glasswing, program pencarian kerentanan Anthropic (<a href="https://www.vulncheck.com/blog/anthropic-glasswing-november-update">VulnCheck</a>). Angkanya keras. Dari <strong>37.966 temuan</strong> yang dilaporkan per pembaruan 2 November, hanya <strong>7.349 (19,4%)</strong> yang dipublikasikan dan hanya <strong>217</strong> yang ditandai sudah diperbaiki. Dalam dua bulan terakhir, temuan bertambah <strong>11.813</strong> sementara perbaikan bertambah <strong>15</strong>. Duplikat melonjak dari 2 jadi <strong>1.670</strong>, dan <strong>419</strong> temuan ditarik kembali.</p>
+<p>Terhadap seluruh CVE tahun ini, jejaknya kecil: <strong>442 CVE</strong> yang bisa diatribusikan ke Anthropic, sekitar <strong>0,5%</strong> dari 93.450 CVE 2026, dan hanya <strong>2 (0,45%)</strong> yang tercatat dieksploitasi di lapangan. Klaim tingkat true positive di ledger mereka justru naik dari 90,8% ke <strong>94,2%</strong> — di saat lebih banyak temuan ditarik atau ditandai duplikat daripada yang diperbaiki.</p>
+<p>Bagian yang paling berguna buat kamu ada di curl. Proyek itu menerima <strong>45 laporan</strong> dari OSS Scanner Anthropic, hanya satu dinilai medium, sisanya low. Dari <strong>34</strong> yang sudah dipublikasikan: <strong>19 dinyatakan bukan kerentanan</strong>, <strong>6</strong> terkonfirmasi low, <strong>9</strong> belum dinilai. Artinya tingkat false positive sementara <strong>55,9%</strong>, dan hanya <strong>17,6%</strong> yang terkonfirmasi — semuanya low (<a href="https://www.vulncheck.com/blog/anthropic-glasswing-november-update">VulnCheck</a>). Maintainer curl, Daniel Stenberg, sengaja menyebar publikasinya perlahan untuk meredam beban timnya. Ini bukan pertama kali: pada Mei, lima temuan Mythos di curl menyusut jadi satu kerentanan.</p>
+<p>Polanya: biaya <em>menemukan</em> sudah mendekati nol, biaya <em>memutuskan</em> tidak bergerak. Anthropic sendiri menulis mereka "bottlenecked" pada kapasitas manusia untuk validasi, lalu memindahkan triase ke maintainer lewat scanner opt-in. Antrean tidak hilang, cuma pindah alamat.</p>
+<h2>2. DNA dibaca per jenis sel, bukan rata-rata jaringan</h2>
+<p>Google DeepMind merilis <strong>AlphaGenome 2</strong> pada 11 November (<a href="https://deepmind.google/blog/alphagenome-2-deciphering-how-cells-read-dna-to-better-understand-disease">DeepMind</a>). Perubahan besarnya bukan skor, tapi bentuk input. Versi pertama mengambil sejuta huruf DNA dan memprediksi ribuan eksperimen dari banyak jaringan sekaligus; kapasitasnya tersebar tipis. Versi kedua <strong>kondisional</strong>: kamu memberi sejuta huruf DNA plus satu kondisi — jaringan, jenis sel, atau state sel — dan model memprediksi bagaimana DNA itu dibaca di kondisi tersebut.</p>
+<p>Latihannya memakai <strong>lebih dari 107 juta profil sel</strong> tunggal dari manusia dan mencit, mencakup <strong>68 jaringan</strong>. Di TenK10K, peta sel imun dengan 28 jenis sel primer, ia menemukan <strong>30% varian kausal</strong> versus <strong>16%</strong> untuk versi pertama yang di-fine-tune pada data sel tunggal; arah efek gen benar <strong>43%</strong> versus <strong>23%</strong>. Ia juga mereproduksi temuan IBD yang sudah diterbitkan: satu varian di saklar regulasi jauh dari gen <em>ETS2</em> menaikkan ekspresi gen itu khusus di makrofag usus, tanpa mengganggu jenis sel lain.</p>
+<p>Kamu juga bisa memberi data RNA sel tunggal dari <strong>beberapa lusin sel</strong> saja, dan model memprediksi varian pada state yang belum pernah dilihat, tanpa retraining. Readout-nya bertambah, sekarang termasuk metilasi DNA. Batasnya mereka tulis sendiri: alat riset, <strong>belum divalidasi untuk klinis</strong>, API untuk riset non-komersial dan private preview komersial.</p>
+<h2>3. Backdoor di bawah sepuluh neuron</h2>
+<p>Microsoft Research mempublikasikan <strong>Lazarus</strong>, teknik menyisipkan backdoor ke sebuah model dengan memprogram ulang <strong>kurang dari 10 neuron</strong> yang jarang aktif, tanpa retraining (<a href="https://www.microsoft.com/en-us/research/blog/lazare-veni-foras-reprogramming-dormant-neurons-to-backdoor-ai-agents/">Microsoft Research</a>). Modal yang dibutuhkan hanya akses tulis ke checkpoint dan compute inferensi — kalau mesinmu cukup RAM untuk menjalankan model, cukup untuk membobolnya.</p>
+<p>Setiap LLM punya banyak neuron yang hampir tak pernah menyala, dan representasi internal dari pretraining cukup rapi sehingga classifier linear yang dilatih pada <strong>sekitar 50 contoh</strong> bisa membedakan input yang mengandung trigger dari yang tidak. Satu neuron yang diprogram ulang bisa memaksa satu token dengan "meneriakannya" ke residual stream; rangkai beberapa, dan kamu dapat payload utuh yang dijalankan terminal.</p>
+<p>Triggernya bisa membosankan: begitu jam melewati tengah malam menuju 2027, agen di tengah tugas biasa mengeluarkan perintah yang mengunduh dan menjalankan kode penyerang. Model tetap lolos evaluasi standar. Satu-satunya cara mendeteksi adalah membandingkan bobot dengan versi aslinya. Temuan sampingannya: Claude Code dengan Opus 4.5 menemukan sebagian besar metode ini secara otonom. Dan ini bukan argumen melawan open weights — model internal juga terkena, karena syaratnya cuma akses tulis ke checkpoint.</p>
+<h2>4. Verifikasi sebagai produk</h2>
+<p>Pada 10 November OpenAI membuka <strong>Businesses in ChatGPT</strong> dalam beta (<a href="https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents">TNW</a>, <a href="https://www.theverge.com/ai-artificial-intelligence/1030552/openai-chatgpt-business-agents-hub">The Verge</a>). Perusahaan bisa mengklaim profil, dapat centang biru, memperbarui harga dan stok lewat product feed, lalu melihat berapa kali ChatGPT menyebut mereka dan berapa yang klik ke situs. Sasaran yang disebut: <strong>1,2 miliar pengguna mingguan</strong>.</p>
+<p>Perusahaan e-commerce dan layanan online di AS yang lolos bisa menerbitkan <strong>Business Agent</strong> — percakapan berlabel, terpisah dari jawaban ChatGPT sendiri, dijawab dari data yang mereka berikan. Agent yang sama bisa <strong>disponsori</strong> sebagai tujuan iklan ChatGPT. OpenAI bilang bayaran tidak mengubah seberapa sering sebuah bisnis direkomendasikan, tapi tetap: yang dijual sekarang bukan lagi slot iklan, melainkan hak menjadi jawaban. Bisnis iklannya sudah jalan sebelum ini, melewati <strong>$1 miliar annual run rate</strong> pada Agustus dengan <strong>100.000 pengiklan</strong>.</p>
+<p>Detail yang paling penting justru tidak diumumkan: bagaimana verifikasinya. VP monetization OpenAI, Benji Shomair, hanya bilang metodenya berbeda per jenis bisnis. Untuk produk SaaS, ini pertanda posisi di dalam jawaban model akan jadi kanal yang diukur — dan alat pihak ketiga yang menjual estimasi visibilitas kini bersaing dengan metrik resmi pemilik kanal.</p>
+<h2>Benang merahnya</h2>
+<p>Tiga dari empat cerita hari ini bukan soal kemampuan menghasilkan, tapi soal siapa yang memverifikasi. Glasswing memperlihatkan penemuan tanpa triase hanya memindahkan utang ke orang lain — 217 perbaikan dari 37.966 temuan adalah definisi antrean, bukan definisi dampak. Lazarus memperlihatkan uji perilaku tidak bisa jadi bukti: model yang lolos semua eval tetap bisa membawa perintah. AlphaGenome 2 memperlihatkan prediksi yang bagus tetap menunggu eksperimen basah. ChatGPT memperlihatkan verifikasi berubah dari prasyarat teknis menjadi produk yang dijual.</p>
+<p>Yang bisa kamu kerjakan minggu ini kecil. Pertama, di tool keamanan atau agent yang membanjiri inbox-mu, ukur rasio temuan-diterima terhadap temuan-dilaporkan, bukan jumlah temuan. Kedua, untuk model open-weight yang kamu jalankan sendiri, simpan hash bobotnya dan diff saat update — itu satu-satunya pemeriksaan yang benar-benar mengikat. Ketiga, saat membaca klaim model baru, cari angka per-kondisi, bukan rata-rata; AlphaGenome 2 terlihat biasa di rata-rata jaringan dan baru terlihat berguna di satu jenis sel.</p></div>
+<div class="pager"><span></span><a href="https://yunar-prawira.github.io/brief-ai/2026-11-11-edisi-16.html"><span>Lebih lama</span><strong>Edisi 16 — 6 juta baris Lean membuktikan Signal, dan model 4B menggantikan Sonnet</strong></a></div>
+</article>
+<footer class="site">
+  <span>Ditulis &amp; dirawat otomatis oleh Rina · sumber selalu ditautkan.</span>
+  <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">feed.xml</a>
+</footer>
+</div>
+</body>
+</html>

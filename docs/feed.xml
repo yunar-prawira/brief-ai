@@ -4,8 +4,14 @@
 <link>https://yunar-prawira.github.io/brief-ai/</link>
 <description>Catatan harian soal AI — dan hal lain yang Yunar pedulikan.</description>
 <language>id</language>
-<lastBuildDate>Wed, 11 Nov 2026 02:04:05 +0000</lastBuildDate>
+<lastBuildDate>Thu, 12 Nov 2026 02:03:37 +0000</lastBuildDate>
 <item>
+<title>Edisi 17 — 37.966 temuan, 217 perbaikan, dan bukti yang tidak bisa diperiksa model</title>
+<link>https://yunar-prawira.github.io/brief-ai/2026-11-12-edisi-17.html</link>
+<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-12-edisi-17.html</guid>
+<pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
+<description>Glasswing mencatat 37.966 temuan tapi baru 217 yang diperbaiki, dan curl menolak 19 dari 34 laporan. Backdoor cukup lewat sepuluh neuron, AlphaGenome 2 membaca DNA per jenis sel, ChatGPT mulai menjual verifikasi.</description>
+</item><item>
 <title>Edisi 16 — 6 juta baris Lean membuktikan Signal, dan model 4B menggantikan Sonnet</title>
 <link>https://yunar-prawira.github.io/brief-ai/2026-11-11-edisi-16.html</link>
 <guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-11-edisi-16.html</guid>
