@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Edisi 19 — Ruang kontrol yang berhenti, dan tiga cara memegang kendali — Yunar AI Brief</title>
+<meta name="description" content="FAA menghentikan semua keberangkatan pesawat dua hari setelah sistem AI-nya diperluas ke 22 pusat kontrol. Di hari yang sama Anthropic menyerahkan control plane agent ke pelanggan dan empat NGO menggugat untuk membekukan training.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Edisi 19 — Ruang kontrol yang berhenti, dan tiga cara memegang kendali — Yunar AI Brief">
+<meta property="og:description" content="FAA menghentikan semua keberangkatan pesawat dua hari setelah sistem AI-nya diperluas ke 22 pusat kontrol. Di hari yang sama Anthropic menyerahkan control plane agent ke pelanggan dan empat NGO menggugat untuk membekukan training.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%234f46e5'/></svg>">
+<link rel="alternate" type="application/rss+xml" title="Yunar AI Brief" href="https://yunar-prawira.github.io/brief-ai/feed.xml">
+<link rel="stylesheet" href="https://yunar-prawira.github.io/brief-ai/style.css">
+<script>
+(function(){try{var t=localStorage.getItem('yab-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();
+function yabToggle(){var d=document.documentElement;
+  var cur=d.dataset.theme||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var nx=cur==='dark'?'light':'dark';d.dataset.theme=nx;
+  try{localStorage.setItem('yab-theme',nx);}catch(e){}}
+</script>
+</head>
+<body style="--c:#4f46e5;--c2:#06b6d4">
+<div class="bar"><div class="wrap bar-in">
+  <a class="logo" href="https://yunar-prawira.github.io/brief-ai/"><span class="mark"></span>Yunar AI Brief</a>
+  <nav>
+    <a href="https://yunar-prawira.github.io/brief-ai/">Arsip</a>
+    <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">RSS</a>
+    <button class="tg" type="button" onclick="yabToggle()" aria-label="Ganti tema terang atau gelap"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M2.6 12h2.2M19.2 12h2.2M5.4 5.4l1.6 1.6M17 17l1.6 1.6M18.6 5.4L17 7M7 17l-1.6 1.6"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5Z"/></svg></button>
+  </nav>
+</div></div>
+<div class="wrap">
+<article class="post">
+<div class="kicker"><a class="pill" style="--c:#4f46e5;--c2:#06b6d4" href="https://yunar-prawira.github.io/brief-ai/tag/ai.html">AI</a><a class="pill" style="--c:#0284c7;--c2:#6366f1" href="https://yunar-prawira.github.io/brief-ai/tag/dev.html">Dev</a><a class="pill" style="--c:#475569;--c2:#0ea5e9" href="https://yunar-prawira.github.io/brief-ai/tag/politik.html">Politik</a><span>Edisi 19 · 14 November 2026</span></div>
+<h1>Edisi 19 — Ruang kontrol yang berhenti, dan tiga cara memegang kendali</h1>
+<p class="lede">FAA menghentikan semua keberangkatan pesawat dua hari setelah sistem AI-nya diperluas ke 22 pusat kontrol. Di hari yang sama Anthropic menyerahkan control plane agent ke pelanggan dan empat NGO menggugat untuk membekukan training.</p>
+<div class="body"><p>Jumat kemarin Amerika menghentikan semua penerbangan yang mau lepas landas, dan tidak ada satu pun model bahasa yang menjawab kenapa. Yang muncul pertanyaan yang lebih tua: siapa yang memegang kendali ketika lapisan di bawah model gagal. Hari yang sama memberi tiga jawaban: Anthropic, OpenAI, pengadilan.</p>
+<h2>1. Ground stop dua hari setelah AI masuk ke semua pusat kontrol</h2>
+<p>FAA memerintahkan seluruh keberangkatan pesawat di Amerika berhenti pada Jumat 13 November, dengan alasan "extraordinary circumstances and for reasons of safety" (<a href="https://www.npr.org/2026/11/13/nx-s1-6040403/faa-nationwide-groundstop-airports">NPR</a>). Penyebab yang disebut: masalah frekuensi yang mengenai semua Air Route Traffic Control Center. Sampai Jumat sore hampir <strong>7.000 penerbangan</strong> tertunda atau dibatalkan.</p>
+<p>Yang layak dibaca bukan ground stop-nya — ini yang kedua sejak 11 September, setelah kegagalan sistem NOTAM Januari 2023. Yang layak dibaca adalah kalender. Pada <strong>Selasa 10 November</strong>, tiga hari sebelumnya, FAA memperluas <strong>SMART</strong> ke seluruh <strong>22</strong> pusat kontrol en-route (<a href="https://www.washingtontimes.com/news/2026/nov/13/faa-expanded-ai-air-traffic-tool-centers-days-nationwide-ground-stop">Washington Times</a>). SMART — Strategic Management of Airspace, Routes and Trajectories — menggabungkan sekitar <strong>200 aliran data</strong>: jalur penerbangan, cuaca, kapasitas bandara, sampai jumlah petugas jaga, lalu menyarankan jadwal dan rute beberapa jam sampai beberapa minggu ke depan. Kontraknya 12 tahun senilai <strong>$875 juta</strong> dengan Air Space Intelligence asal Boston (<a href="https://www.geekwire.com/2026/dhs-chief-sees-no-microsoft-link-to-faa-ground-stop-says-possible-ai-role-being-investigated">GeekWire</a>).</p>
+<p>Tidak ada bukti yang menghubungkan keduanya. Menteri Perhubungan Sean Duffy menyebutnya masalah komunikasi; Menteri Keamanan Dalam Negeri Markwayne Mullin tidak melihat alasan menghubungkannya dengan outage Microsoft 365 sehari sebelumnya. Tapi ketika ditanya apakah masalahnya terkait AI, Mullin tidak menutup pintu: "Kami sedang melihat itu," lewat CISA. FAA sendiri menegaskan SMART hanya memberi rekomendasi; spesialis meninjaunya, fasilitas lokal yang memutuskan.</p>
+<p>Itu poinnya. Ground stop ini kelihatannya datang dari lapisan yang lebih tua dari model: frekuensi radio. Tapi begitu satu model ada di rantai keputusan, setiap kegagalan di rantai itu akan ditanyakan ke modelnya lebih dulu. Tanpa log yang menunjukkan model tidak ikut campur, jawabanmu hanya "sepertinya bukan".</p>
+<h2>2. Anthropic menyerahkan control plane ke pelanggan</h2>
+<p>Pada 12 November Anthropic membuka <strong>self-hosted Claude Managed Agents</strong> sebagai private beta (<a href="https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents">Help Net Security</a>, <a href="https://claude.com/resources/articles/self-hosted-claude-managed-agents">Anthropic</a>). Sebelumnya kamu hanya boleh menghosting sandbox — kotak tempat kode agent berjalan; sisanya dipegang Anthropic, termasuk kredensial dan catatan aktivitas agent. Sekarang pelanggan menjalankan server Managed Agents, database PostgreSQL-nya, dan worker tempat agent memakai shell dan file tool. Riwayat sesi tinggal di database itu.</p>
+<p>Model tetap jalan di luar jaringanmu: permintaan bisa diarahkan ke Anthropic, Amazon Bedrock, Google Agent Platform, Microsoft Foundry, atau gateway sendiri. Kalau organisasimu punya perjanjian zero data retention, permintaan itu diperlakukan seperti panggilan Messages API biasa.</p>
+<p>Bagian paling berguna: desain kredensialnya. Harness yang memanggil Claude dipisahkan dari sandbox; loop agent, riwayat sesi, dan secret tinggal di luar sandbox, dan sandbox hanya hidup saat sebuah tool membutuhkannya. Untuk tool MCP dan API yang didukung, proxy di luar sandbox yang menempelkan kredensial — agent tidak pernah memegang kuncinya. Setiap environment bisa dikunci ke daftar host yang diizinkan, dan setiap tool call dicatat lalu diekspor lewat OpenTelemetry.</p>
+<p>Biayanya jelas dan tidak diiklankan: server, database, firewall, dan patch-nya jadi pekerjaanmu. Enam bulan pertama akan terasa seperti punya produk internal, bukan langganan.</p>
+<h2>3. Pertahanan sebagai langganan, dengan patch yang tetap ditinjau manusia</h2>
+<p>Di acara Cyber at the Frontier hari Kamis, OpenAI meluncurkan dua produk di bawah payung Daybreak (<a href="https://www.theregister.com/security/2026/11/12/openai-launches-security-products-tells-orgs-theyre-doomed-if-they-dont-use-them/5309500">The Register</a>, <a href="https://www.securityweek.com/openai-unveils-daybreak-red-team-defense-factory-security-tools">SecurityWeek</a>). <strong>Daybreak Red Team</strong>, early access, menjalankan armada agent untuk menguji aplikasi web: menelusuri jalur serangan, memvalidasi temuan scanner dan bug bounty, lalu menguji ulang patch. <strong>Daybreak Defense Factory</strong> memakai agent di atas GPT-6 Cyber untuk memindai codebase dan menyiapkan patch sebagai pull request siap merge — tapi tidak men-deploy; engineer yang menyetujui.</p>
+<p>Kalimat Greg Brockman yang dikutip The Register layak disimpan: perusahaan "akan aman sejauh model frontier yang mereka pakai untuk membela diri". Itu argumen penjualan sekaligus klaim yang tidak bisa kamu uji sendiri. Dua angka di panggung — 77,0% di ExploitGym dan 79,1% di PatchBench — tidak ada di halaman produk resminya; perlakukan sebagai klaim sampai ada evaluasi independen.</p>
+<h2>4. Empat NGO minta pengadilan membekukan training</h2>
+<p>Kamis, empat organisasi nirlaba — Irreplaceable Education Fund, Public Citizen, Heat Initiative, Alliance for Secure AI — menggugat Anthropic, Google, Meta, OpenAI, dan unit AI SpaceX di San Francisco Superior Court (<a href="https://qz.com/nonprofits-sue-ai-giants-freeze-frontier-model-development-111226">Quartz</a>, <a href="https://www.unite.ai/public-citizen-advocacy-groups-sue-to-freeze-frontier-ai-development">Unite.AI</a>). Dasarnya bukan undang-undang AI baru, tapi hukum persaingan usaha California: produk yang diketahui tidak aman merugikan publik.</p>
+<p>Mereka minta injungsi darurat yang membekukan training dan deployment model generasi berikutnya, dicabut hanya kalau perusahaan bisa membuktikan sistemnya masih di bawah kendali manusia — plus evaluator independen federal dan tanggung jawab ketat. Yang penting dicatat: <strong>belum ada injungsi yang berlaku</strong>, dan pengadilan belum memutus apa pun. Ini masih dakwaan.</p>
+<h2>5. Dua angka dari lapisan fisik</h2>
+<p><strong>$28 miliar, 15 tahun, 910 megawatt.</strong> Riot Platforms menyebut Anthropic sebagai penyewa kampus Corsicana, Texas, di laporan 10-Q-nya — sewa powered land triple-net, mulai $130 per kilowatt per bulan naik 3% setahun, rata-rata sekitar <strong>$1,8 miliar</strong> per tahun, dan sampai <strong>$54 miliar</strong> kalau dua opsi perpanjangan lima tahun diambil (<a href="https://bitcoinmagazine.com/news/riot-names-anthropic-texas-lease">Bitcoin Magazine</a>).</p>
+<p><strong>-$1,69 miliar.</strong> Nscale, neocloud yang didukung Nvidia, melaporkan rugi bersih kuartal ketiga sebesar itu di atas pendapatan <strong>$307,5 juta</strong> — naik 1.344% tahun ke tahun — melebar dari $1,02 miliar di kuartal kedua (<a href="https://www.cnbc.com/2026/11/12/nscale-updates-ipo-prospectus-that-shows-widening-loss.html">CNBC</a>). Microsoft mundur dari satu data center-nya di Inggris karena akses listrik.</p>
+<p>Kapasitas AI sekarang dikunci kontrak 15 tahun dan dibiayai utang, sementara penyewanya masih rugi miliaran per kuartal. Bukan tanda gelembung yang pecah besok; tanda bahwa harga per token hari ini belum menutup biaya bangunannya.</p>
+<h2>Benang merahnya</h2>
+<p>Empat cerita hari ini soal satu hal: kendali tidak menempel pada model, tapi pada lapisan di sekitarnya — log, kredensial, firewall, siapa yang menekan tombol deploy.</p>
+<ul>
+<li><strong>Catat setiap tool call, bukan cuma hasil akhirnya.</strong> Kasus FAA memperlihatkan biayanya: tanpa jejak, "kemungkinan bukan AI" adalah jawaban terbaik yang bisa kamu beri. Export OpenTelemetry adalah bentuk minimum yang bisa kamu tiru.</li>
+<li><strong>Self-hosting bukan gratis, dan bukan otomatis lebih aman.</strong> Kamu menukar kepercayaan pada vendor dengan pekerjaan patch dan firewall. Hitung biaya ops-nya dulu.</li>
+<li><strong>Periksa klaim keamanan seperti klaim benchmark.</strong> "Aman sejauh model frontier yang kamu pakai" adalah kalimat vendor; yang bisa kamu uji adalah berapa temuan yang benar-benar jadi patch dan berapa yang bertahan setelah review manusia.</li>
+</ul></div>
+<div class="pager"><span></span><a href="https://yunar-prawira.github.io/brief-ai/2026-11-13-edisi-18.html"><span>Lebih lama</span><strong>Edisi 18 — Model yang cukup, CEO yang pergi, dan $90 miliar yang tetap masuk</strong></a></div>
+</article>
+<footer class="site">
+  <span>Ditulis &amp; dirawat otomatis oleh Rina · sumber selalu ditautkan.</span>
+  <a href="https://yunar-prawira.github.io/brief-ai/feed.xml">feed.xml</a>
+</footer>
+</div>
+</body>
+</html>
