@@ -13,6 +13,7 @@ ringkas: satu paragraf ringkas untuk kartu & RSS
 ---
 """
 import html
+import json
 import re
 import shutil
 import unicodedata
@@ -96,17 +97,40 @@ def esc(s: str) -> str:
     return html.escape(s, quote=True)
 
 
-def page(title, body, css_vars="", desc=None):
+def abs_url(path: str) -> str:
+    """URL absolut untuk canonical / sitemap / JSON-LD."""
+    return SITE_URL + (path if path.startswith("/") else "/" + path)
+
+
+def squeeze(s: str) -> str:
+    return re.sub(r"\s+", " ", s or "").strip()
+
+
+def page(title, body, css_vars="", desc=None, path="/", og_type="website", ld=None):
+    canon = abs_url(path)
+    desc = squeeze(desc or SITE_TAGLINE)
+    ld_html = (f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>'
+               if ld else "")
     return f"""<!doctype html>
 <html lang="id">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title>
-<meta name="description" content="{esc(desc or SITE_TAGLINE)}">
+<meta name="description" content="{esc(desc)}">
 <meta name="color-scheme" content="light dark">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="{esc(canon)}">
 <meta property="og:title" content="{esc(title)}">
-<meta property="og:description" content="{esc(desc or SITE_TAGLINE)}">
+<meta property="og:description" content="{esc(desc)}">
+<meta property="og:type" content="{esc(og_type)}">
+<meta property="og:url" content="{esc(canon)}">
+<meta property="og:site_name" content="{esc(SITE_TITLE)}">
+<meta property="og:locale" content="id_ID">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="{esc(title)}">
+<meta name="twitter:description" content="{esc(desc)}">
+{ld_html}
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='28' fill='%234f46e5'/></svg>">
 <link rel="alternate" type="application/rss+xml" title="{esc(SITE_TITLE)}" href="{SITE_URL}/feed.xml">
 <link rel="stylesheet" href="{SITE_URL}/style.css">
@@ -175,6 +199,76 @@ def card_html(it):
 </a>"""
 
 
+def write_sitemap(items, by_tag):
+    """sitemap.xml: beranda + semua edisi + halaman topik."""
+    rows = []
+    today = date.today().isoformat()
+    newest = items[0]["date"].isoformat() if items else today
+    rows.append((abs_url("/"), newest, "daily", "1.0"))
+    for it in items:
+        rows.append((abs_url(f"/{it['slug']}.html"), it["date"].isoformat(), "monthly", "0.8"))
+    for t, group in by_tag.items():
+        last = max(x["date"] for x in group).isoformat()
+        rows.append((abs_url(f"/tag/{slugify(t)}.html"), last, "weekly", "0.5"))
+    body = "\n".join(
+        f"  <url><loc>{esc(u)}</loc><lastmod>{m}</lastmod>"
+        f"<changefreq>{c}</changefreq><priority>{p}</priority></url>"
+        for u, m, c, p in rows)
+    (OUT / "sitemap.xml").write_text(
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        f"{body}\n</urlset>\n", encoding="utf-8")
+    return len(rows)
+
+
+def write_robots():
+    """robots.txt: izinkan crawl biasa + asisten AI (supaya edisi bisa dikutip)."""
+    bots = ["GPTBot", "OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Perplexity-User",
+            "ClaudeBot", "Claude-SearchBot", "Claude-User", "Googlebot", "Bingbot",
+            "Google-Extended", "Applebot", "CCBot"]
+    lines = ["User-agent: *", "Allow: /", ""]
+    for b in bots:
+        lines += [f"User-agent: {b}", "Allow: /", ""]
+    lines += [f"Sitemap: {abs_url('/sitemap.xml')}", ""]
+    (OUT / "robots.txt").write_text("\n".join(lines), encoding="utf-8")
+
+
+def write_llms(items, by_tag):
+    """llms.txt: peta ringkas situs untuk asisten AI (llmstxt.org)."""
+    out = [
+        f"# {SITE_TITLE}",
+        "",
+        f"> {SITE_TAGLINE}",
+        "",
+        "Blog harian berbahasa Indonesia: satu edisi per hari berisi ringkasan berita AI "
+        "pilihan, dengan tautan sumber di setiap klaim. Ditulis dan dirawat otomatis.",
+        "",
+        f"- RSS: {abs_url('/feed.xml')}",
+        f"- Sitemap: {abs_url('/sitemap.xml')}",
+        "- Kutipan diperbolehkan dengan atribusi dan tautan ke edisi aslinya.",
+        "",
+        "## Edisi",
+        "",
+    ]
+    for it in items:
+        meta = it["meta"]
+        label = ""
+        if meta.get("edisi") and not meta["title"].lower().startswith("edisi"):
+            label = f"Edisi {meta['edisi']} — "
+        ringkas = squeeze(meta.get("ringkas", ""))
+        line = f"- [{label}{meta['title']}]({abs_url('/' + it['slug'] + '.html')})"
+        line += f" — {human_date(it['date'])}"
+        if ringkas:
+            line += f": {ringkas}"
+        out.append(line)
+    if by_tag:
+        out += ["", "## Topik", ""]
+        for t in sorted(by_tag, key=lambda x: (-len(by_tag[x]), x)):
+            out.append(f"- [{t}]({abs_url('/tag/' + slugify(t) + '.html')}): "
+                       f"{len(by_tag[t])} tulisan")
+    (OUT / "llms.txt").write_text("\n".join(out) + "\n", encoding="utf-8")
+
+
 def build():
     if OUT.exists():
         shutil.rmtree(OUT)
@@ -203,9 +297,29 @@ def build():
 <div class="body">{body_html}</div>
 {pager}
 </article>"""
+        post_url = abs_url(f"/{it['slug']}.html")
+        ld = {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": meta["title"],
+            "description": squeeze(meta.get("ringkas", "")),
+            "datePublished": it["date"].isoformat(),
+            "dateModified": it["date"].isoformat(),
+            "inLanguage": "id",
+            "url": post_url,
+            "mainEntityOfPage": post_url,
+            "author": {"@type": "Person", "name": "Yunar Prawira Negara",
+                       "url": "https://github.com/yunar-prawira"},
+            "publisher": {"@type": "Person", "name": "Yunar Prawira Negara"},
+            "isPartOf": {"@type": "Blog", "name": SITE_TITLE, "url": abs_url("/")},
+        }
+        if it["tags"]:
+            ld["keywords"] = ", ".join(it["tags"])
+            ld["articleSection"] = it["tags"][0]
         (OUT / f"{it['slug']}.html").write_text(
             page(f"{meta['title']} — {SITE_TITLE}", body,
-                 css_vars=css_vars(it["color"]), desc=meta.get("ringkas")),
+                 css_vars=css_vars(it["color"]), desc=meta.get("ringkas"),
+                 path=f"/{it['slug']}.html", og_type="article", ld=ld),
             encoding="utf-8")
 
     by_tag = {}
@@ -219,7 +333,9 @@ def build():
                 f'<h1>{esc(t)}</h1><p class="lede">{len(group)} tulisan.</p></section>'
                 f'<div class="grid">{"".join(card_html(x) for x in group)}</div>')
         (OUT / "tag" / f"{slugify(t)}.html").write_text(
-            page(f"{t} — {SITE_TITLE}", body, css_vars=css_vars(pair)), encoding="utf-8")
+            page(f"{t} — {SITE_TITLE}", body, css_vars=css_vars(pair),
+                 desc=f"{len(group)} tulisan bertopik {t} di {SITE_TITLE}.",
+                 path=f"/tag/{slugify(t)}.html"), encoding="utf-8")
 
     if items:
         top = items[0]
@@ -245,8 +361,25 @@ def build():
         f'href="{SITE_URL}/tag/{slugify(t)}.html">{esc(t)}</a>'
         for t in sorted(by_tag, key=lambda x: (-len(by_tag[x]), x)))
     rail = f'<div class="rail">{rail}</div>' if rail else ""
-    (OUT / "index.html").write_text(page(SITE_TITLE, hero + rail + grid, desc=SITE_TAGLINE),
-                                    encoding="utf-8")
+    blog_ld = {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": SITE_TITLE,
+        "description": SITE_TAGLINE,
+        "url": abs_url("/"),
+        "inLanguage": "id",
+        "author": {"@type": "Person", "name": "Yunar Prawira Negara"},
+        "blogPost": [
+            {"@type": "BlogPosting", "headline": x["meta"]["title"],
+             "url": abs_url(f"/{x['slug']}.html"),
+             "datePublished": x["date"].isoformat(),
+             "description": squeeze(x["meta"].get("ringkas", ""))}
+            for x in items[:10]
+        ],
+    }
+    (OUT / "index.html").write_text(
+        page(SITE_TITLE, hero + rail + grid, desc=SITE_TAGLINE, path="/", ld=blog_ld),
+        encoding="utf-8")
 
     entries = []
     for it in items[:40]:
@@ -269,8 +402,11 @@ def build():
 </channel></rss>
 """
     (OUT / "feed.xml").write_text(feed, encoding="utf-8")
+    n_urls = write_sitemap(items, by_tag)
+    write_robots()
+    write_llms(items, by_tag)
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
-    print(f"built {len(items)} post, {len(by_tag)} topik -> {OUT}")
+    print(f"built {len(items)} post, {len(by_tag)} topik, {n_urls} url sitemap -> {OUT}")
 
 
 if __name__ == "__main__":
