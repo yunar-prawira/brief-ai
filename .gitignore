@@ -9,3 +9,4 @@ node_modules/
 *.pem
 *.key
 notes-tmp/
+log/ui-proof/
