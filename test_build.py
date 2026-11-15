@@ -123,6 +123,31 @@ def main():
         checks["llms.txt tidak menggandakan label edisi"] = (
             "Edisi 07 — Edisi 07" not in probe_txt and "[Edisi 07 — Judul Probe]" in probe_txt)
 
+        # --- regresi kontras: semua warna tema harus lolos WCAG setelah digelapkan ---
+        def _lum(hexc):
+            h = hexc.lstrip("#")
+            vals = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+            lin = [v / 12.92 if v <= 0.03928 else ((v + 0.055) / 1.055) ** 2.4 for v in vals]
+            return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2]
+
+        def _ratio(a, b):
+            la, lb = _lum(a), _lum(b)
+            hi, lo = max(la, lb), min(la, lb)
+            return (hi + 0.05) / (lo + 0.05)
+
+        paper = "#fbfbfa"
+        buruk = []
+        for nama, (c, c2) in buildmod.THEMES.items():
+            ink = buildmod.darken(c, 0.58)
+            cta1, cta2 = buildmod.darken(c, 0.86), buildmod.darken(c2, 0.50)
+            if _ratio(ink, paper) < 4.5:
+                buruk.append(f"pil {nama}={_ratio(ink, paper):.2f}")
+            if min(_ratio("#ffffff", cta1), _ratio("#ffffff", cta2)) < 4.5:
+                buruk.append(f"cta {nama}={min(_ratio('#ffffff', cta1), _ratio('#ffffff', cta2)):.2f}")
+        checks["kontras: semua warna tema >=4.5"] = not buruk
+        if buruk:
+            print("gagal kontras:", buruk)
+
         gagal = [k for k, ok in checks.items() if not ok]
         for k, ok in checks.items():
             print(("PASS  " if ok else "FAIL  ") + k)

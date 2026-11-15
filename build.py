@@ -74,8 +74,19 @@ def theme_of(tags):
     return THEMES["default"]
 
 
+def darken(hex_color: str, factor: float) -> str:
+    """Campur warna tema ke arah hitam supaya teks putih di atasnya lolos kontras."""
+    h = hex_color.lstrip("#")
+    r, g, b = (int(h[i:i + 2], 16) for i in (0, 2, 4))
+    return "#{:02x}{:02x}{:02x}".format(*(int(v * factor) for v in (r, g, b)))
+
+
 def css_vars(color_pair) -> str:
-    return f"--c:{color_pair[0]};--c2:{color_pair[1]}"
+    c, c2 = color_pair
+    return (f"--c:{c};--c2:{c2}"
+            f";--c-ink:{darken(c, 0.58)}"          # teks pil/topik: >=4.5:1 di latar terang
+            f";--c-cta1:{darken(c, 0.86)}"          # stop gradien CTA (teks putih)
+            f";--c-cta2:{darken(c2, 0.50)}")
 
 
 def parse_front(text: str):

@@ -56,7 +56,7 @@ a{color:inherit}
   font-size:.82rem; font-weight:520; color:var(--muted)}
 .bar nav a{text-decoration:none}
 .bar nav a:hover{color:var(--ink)}
-.tg{display:inline-flex; align-items:center; justify-content:center; width:32px; height:32px;
+.tg{display:inline-flex; align-items:center; justify-content:center; width:44px; height:44px;
   border-radius:9px; border:1px solid var(--line); background:var(--panel); color:var(--ink-2);
   cursor:pointer; padding:0; transition:.16s}
 .tg:hover{color:var(--ink); border-color:var(--c); transform:translateY(-1px)}
@@ -77,7 +77,7 @@ a{color:inherit}
 .kicker{display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:14px;
   font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; font-weight:680; color:var(--muted)}
 .pill{display:inline-flex; align-items:center; padding:4px 10px; border-radius:999px;
-  background:color-mix(in srgb, var(--c) 12%, transparent); color:var(--c); text-decoration:none;
+  background:color-mix(in srgb, var(--c) 12%, transparent); color:var(--c-ink); text-decoration:none;
   font-size:.7rem; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
   border:1px solid color-mix(in srgb, var(--c) 26%, transparent)}
 .pill:hover{background:color-mix(in srgb, var(--c) 22%, transparent)}
@@ -91,7 +91,7 @@ a{color:inherit}
   font-weight:400; line-height:1.6}
 .cta{display:inline-flex; align-items:center; gap:8px; font-size:.87rem; font-weight:620;
   text-decoration:none; padding:10px 17px; border-radius:999px; color:#fff;
-  background:linear-gradient(120deg, var(--c), var(--c2)); border:0; transition:.18s;
+  background:linear-gradient(120deg, var(--c-cta1), var(--c-cta2)); border:0; transition:.18s;
   box-shadow:0 6px 18px -8px color-mix(in srgb, var(--c) 70%, transparent)}
 .cta:hover{transform:translateY(-1px); box-shadow:0 10px 24px -10px color-mix(in srgb, var(--c) 80%, transparent)}
 
@@ -99,7 +99,7 @@ a{color:inherit}
 .rail{display:flex; gap:8px; overflow-x:auto; padding:26px 0 20px; border-bottom:1px solid var(--line-soft);
   scrollbar-width:none}
 .rail::-webkit-scrollbar{display:none}
-.rail a{white-space:nowrap; font-size:.79rem; font-weight:620; color:var(--c); text-decoration:none;
+.rail a{white-space:nowrap; font-size:.79rem; font-weight:620; color:var(--c-ink); text-decoration:none;
   padding:6px 13px; border-radius:999px;
   background:color-mix(in srgb, var(--c) 8%, var(--panel));
   border:1px solid color-mix(in srgb, var(--c) 22%, var(--line)); transition:.16s}
