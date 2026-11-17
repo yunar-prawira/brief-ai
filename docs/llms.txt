@@ -10,6 +10,7 @@ Blog harian berbahasa Indonesia: satu edisi per hari berisi ringkasan berita AI 
 
 ## Edisi
 
+- [Edisi 22 — Yang diingat, yang dibuang, dan yang berjalan tanpa kamu](https://yunar-prawira.github.io/brief-ai/2026-11-17-edisi-22.html) — 17 November 2026: Qwen4-Max memotong biaya per tugas 62% dengan membuang konteks yang tidak perlu. Anthropic menemukan agent yang lebih pintar justru mencatat lebih sedikit. Untuk pertama kali, satu framework mengeksploitasi celah tanpa manusia.
 - [Edisi 21 — 194 chip Huawei, 700 ribu kuas, dan lowongan yang menutup untuk pemula](https://yunar-prawira.github.io/brief-ai/2026-11-16-edisi-21.html) — 16 November 2026: LongCat-2.5 1,6 triliun parameter, lisensi MIT, dilatih tanpa GPU Nvidia. Fable 5.2 melukis fotorealistis lewat kode Python. Dan RBA menemukan yang paling kena lebih dulu di bidang terekspos AI: pekerja umur 15-24.
 - [Edisi 20 — Robot yang belajar dari video, dan tagihan yang tidak ikut turun](https://yunar-prawira.github.io/brief-ai/2026-11-15-edisi-20.html) — 15 November 2026: Runway merilis Praxis-1 27B open weights dan menyalip semua model aksi-dunia, di hari yang sama OpenAI membubarkan tim robotikanya. Lalu tiga tagihan: prompt lama, akurasi 15x lebih mahal, $901 miliar komitmen compute.
 - [Edisi 19 — Ruang kontrol yang berhenti, dan tiga cara memegang kendali](https://yunar-prawira.github.io/brief-ai/2026-11-14-edisi-19.html) — 14 November 2026: FAA menghentikan semua keberangkatan pesawat dua hari setelah sistem AI-nya diperluas ke 22 pusat kontrol. Di hari yang sama Anthropic menyerahkan control plane agent ke pelanggan dan empat NGO menggugat untuk membekukan training.
@@ -34,9 +35,9 @@ Blog harian berbahasa Indonesia: satu edisi per hari berisi ringkasan berita AI 
 
 ## Topik
 
-- [AI](https://yunar-prawira.github.io/brief-ai/tag/ai.html): 20 tulisan
-- [Dev](https://yunar-prawira.github.io/brief-ai/tag/dev.html): 18 tulisan
-- [Riset](https://yunar-prawira.github.io/brief-ai/tag/riset.html): 13 tulisan
+- [AI](https://yunar-prawira.github.io/brief-ai/tag/ai.html): 21 tulisan
+- [Dev](https://yunar-prawira.github.io/brief-ai/tag/dev.html): 19 tulisan
+- [Riset](https://yunar-prawira.github.io/brief-ai/tag/riset.html): 14 tulisan
 - [HR](https://yunar-prawira.github.io/brief-ai/tag/hr.html): 4 tulisan
 - [SaaS](https://yunar-prawira.github.io/brief-ai/tag/saas.html): 4 tulisan
 - [Indonesia](https://yunar-prawira.github.io/brief-ai/tag/indonesia.html): 3 tulisan
