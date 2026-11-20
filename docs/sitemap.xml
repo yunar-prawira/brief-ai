@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://yunar-prawira.github.io/brief-ai/</loc><lastmod>2026-11-18</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://yunar-prawira.github.io/brief-ai/</loc><lastmod>2026-11-20</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://yunar-prawira.github.io/brief-ai/2026-11-20-edisi-24.html</loc><lastmod>2026-11-20</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/2026-11-18-edisi-23.html</loc><lastmod>2026-11-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/2026-11-17-edisi-22.html</loc><lastmod>2026-11-17</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/2026-11-16-edisi-21.html</loc><lastmod>2026-11-16</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
@@ -24,12 +25,12 @@
   <url><loc>https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-03.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-02.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-01.html</loc><lastmod>2026-10-29</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://yunar-prawira.github.io/brief-ai/tag/ai.html</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://yunar-prawira.github.io/brief-ai/tag/dev.html</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://yunar-prawira.github.io/brief-ai/tag/ai.html</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://yunar-prawira.github.io/brief-ai/tag/dev.html</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://yunar-prawira.github.io/brief-ai/tag/indonesia.html</loc><lastmod>2026-11-20</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/tag/riset.html</loc><lastmod>2026-11-18</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/tag/hr.html</loc><lastmod>2026-11-16</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/tag/politik.html</loc><lastmod>2026-11-14</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/tag/saas.html</loc><lastmod>2026-11-13</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://yunar-prawira.github.io/brief-ai/tag/indonesia.html</loc><lastmod>2026-10-31</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
   <url><loc>https://yunar-prawira.github.io/brief-ai/tag/man-utd.html</loc><lastmod>2026-10-29</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url>
 </urlset>
