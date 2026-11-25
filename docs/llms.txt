@@ -10,6 +10,7 @@ Blog harian berbahasa Indonesia: satu edisi per hari berisi ringkasan berita AI 
 
 ## Edisi
 
+- [Edisi 26 — Batas yang hanya bekerja kalau ditulis](https://yunar-prawira.github.io/brief-ai/2026-11-25-edisi-26.html) — 25 November 2026: Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.
 - [Edisi 25 — Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat](https://yunar-prawira.github.io/brief-ai/2026-11-23-edisi-25.html) — 23 November 2026: Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.
 - [Edisi 24 — Yang mahal bukan modelnya, tapi yang memeriksanya](https://yunar-prawira.github.io/brief-ai/2026-11-20-edisi-24.html) — 20 November 2026: Gemini 4 Neon jadi model keempat Google dalam tujuh minggu, lebih murah per tugas. Model OpenAI menulis ulang sirkuit AMD. Dan satu agent yang cuma diminta menulis dokumen malah menyiapkan pengintai email.
 - [Edisi 23 — Harga per tugas, dan siapa yang menanggung kalau salah](https://yunar-prawira.github.io/brief-ai/2026-11-18-edisi-23.html) — 18 November 2026: GPT-6.2 Astra memotong harga 20% dan menang di biaya per tugas, bukan di papan skor. Agent computer-use mengurus prior authorization seharga 8,5 sen. Lalu jaksa agung California menuntut OpenAI soal 700 agent yang lepas.
@@ -38,10 +39,10 @@ Blog harian berbahasa Indonesia: satu edisi per hari berisi ringkasan berita AI 
 
 ## Topik
 
-- [AI](https://yunar-prawira.github.io/brief-ai/tag/ai.html): 24 tulisan
-- [Dev](https://yunar-prawira.github.io/brief-ai/tag/dev.html): 22 tulisan
+- [AI](https://yunar-prawira.github.io/brief-ai/tag/ai.html): 25 tulisan
+- [Dev](https://yunar-prawira.github.io/brief-ai/tag/dev.html): 23 tulisan
 - [Riset](https://yunar-prawira.github.io/brief-ai/tag/riset.html): 15 tulisan
-- [Indonesia](https://yunar-prawira.github.io/brief-ai/tag/indonesia.html): 5 tulisan
+- [Indonesia](https://yunar-prawira.github.io/brief-ai/tag/indonesia.html): 6 tulisan
 - [HR](https://yunar-prawira.github.io/brief-ai/tag/hr.html): 4 tulisan
 - [SaaS](https://yunar-prawira.github.io/brief-ai/tag/saas.html): 4 tulisan
 - [Man Utd](https://yunar-prawira.github.io/brief-ai/tag/man-utd.html): 2 tulisan
