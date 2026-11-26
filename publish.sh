@@ -6,7 +6,7 @@ cd "$(dirname "$0")"
 
 MSG="${1:-edisi baru $(date +%F)}"
 REPO="yunar-prawira/brief-ai"
-SITE="https://yunar-prawira.github.io/brief-ai"
+SITE="https://kilas.yunarprawira.com"
 
 python3 test_build.py
 python3 build.py
@@ -25,7 +25,7 @@ NEWEST=$(ls docs/*.html | grep -v '/index.html' | sort | tail -1 | xargs basenam
 for i in $(seq 1 40); do
   latest=$(gh api "repos/$REPO/pages/builds/latest" --jq '.status+" "+.commit' 2>/dev/null || true)
   status=${latest%% *}; built=${latest##* }
-  page=$(curl -s -o /dev/null -w "%{http_code}" "$SITE/$NEWEST")
+  page=$(curl -s -o /dev/null -w "%{http_code}" "$SITE/$NEWEST?cb=$SHA")
   css=$(curl -s -o /dev/null -w "%{http_code}" "$SITE/style.css")
   if [ "$built" = "$SHA" ] && [ "$status" = "built" ] && [ "$page" = "200" ] && [ "$css" = "200" ]; then
     echo "LIVE ($SHA): $SITE/$NEWEST"

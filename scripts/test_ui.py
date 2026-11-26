@@ -19,7 +19,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-PROD = "https://yunar-prawira.github.io/brief-ai"
+PROD = "https://kilas.yunarprawira.com"
 SHOT_DIR = ROOT / "log" / "ui-proof"
 
 try:

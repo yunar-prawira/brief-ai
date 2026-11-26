@@ -12,7 +12,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
-SITE = "https://yunar-prawira.github.io/brief-ai"
+SITE = "https://kilas.yunarprawira.com"
 
 
 def ld_json(html_text):
@@ -64,6 +64,7 @@ def main():
             "tag page memuat judul topik": "Man Utd" in (out / "tag" / "man-utd.html").read_text(),
             "rss urut + jumlah": len(items) == 2 and items[0].findtext("title") == "Yang Baru",
             ".nojekyll": (out / ".nojekyll").exists(),
+            "CNAME = host custom domain": (out / "CNAME").read_text().strip() == SITE.split("//")[1],
             # --- v2: tema, css eksternal, dark/light ---
             "css eksternal tersalin": (out / "style.css").exists() and "/style.css" in idx,
             "css punya varian gelap": '[data-theme="dark"]' in (out / "style.css").read_text(),

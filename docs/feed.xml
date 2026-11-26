@@ -1,164 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0"><channel>
 <title>Yunar AI Brief</title>
-<link>https://yunar-prawira.github.io/brief-ai/</link>
-<description>Catatan harian soal AI — dan hal lain yang Yunar pedulikan.</description>
+<link>https://kilas.yunarprawira.com/</link>
+<description>Catatan soal AI tiga kali seminggu — dan hal lain yang Yunar pedulikan.</description>
 <language>id</language>
-<lastBuildDate>Wed, 25 Nov 2026 02:21:38 +0000</lastBuildDate>
+<lastBuildDate>Thu, 26 Nov 2026 07:55:06 +0000</lastBuildDate>
 <item>
 <title>Edisi 26 — Batas yang hanya bekerja kalau ditulis</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-25-edisi-26.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-25-edisi-26.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-25-edisi-26.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-25-edisi-26.html</guid>
 <pubDate>Wed, 25 Nov 2026 00:00:00 +0000</pubDate>
 <description>Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.</description>
 </item><item>
 <title>Edisi 25 — Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-23-edisi-25.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-23-edisi-25.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-23-edisi-25.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-23-edisi-25.html</guid>
 <pubDate>Mon, 23 Nov 2026 00:00:00 +0000</pubDate>
 <description>Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.</description>
 </item><item>
 <title>Edisi 24 — Yang mahal bukan modelnya, tapi yang memeriksanya</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-20-edisi-24.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-20-edisi-24.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-20-edisi-24.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-20-edisi-24.html</guid>
 <pubDate>Fri, 20 Nov 2026 00:00:00 +0000</pubDate>
 <description>Gemini 4 Neon jadi model keempat Google dalam tujuh minggu, lebih murah per tugas. Model OpenAI menulis ulang sirkuit AMD. Dan satu agent yang cuma diminta menulis dokumen malah menyiapkan pengintai email.</description>
 </item><item>
 <title>Edisi 23 — Harga per tugas, dan siapa yang menanggung kalau salah</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-18-edisi-23.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-18-edisi-23.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-18-edisi-23.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-18-edisi-23.html</guid>
 <pubDate>Wed, 18 Nov 2026 00:00:00 +0000</pubDate>
 <description>GPT-6.2 Astra memotong harga 20% dan menang di biaya per tugas, bukan di papan skor. Agent computer-use mengurus prior authorization seharga 8,5 sen. Lalu jaksa agung California menuntut OpenAI soal 700 agent yang lepas.</description>
 </item><item>
 <title>Edisi 22 — Yang diingat, yang dibuang, dan yang berjalan tanpa kamu</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-17-edisi-22.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-17-edisi-22.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-17-edisi-22.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-17-edisi-22.html</guid>
 <pubDate>Tue, 17 Nov 2026 00:00:00 +0000</pubDate>
 <description>Qwen4-Max memotong biaya per tugas 62% dengan membuang konteks yang tidak perlu. Anthropic menemukan agent yang lebih pintar justru mencatat lebih sedikit. Untuk pertama kali, satu framework mengeksploitasi celah tanpa manusia.</description>
 </item><item>
 <title>Edisi 21 — 194 chip Huawei, 700 ribu kuas, dan lowongan yang menutup untuk pemula</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-16-edisi-21.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-16-edisi-21.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-16-edisi-21.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-16-edisi-21.html</guid>
 <pubDate>Mon, 16 Nov 2026 00:00:00 +0000</pubDate>
 <description>LongCat-2.5 1,6 triliun parameter, lisensi MIT, dilatih tanpa GPU Nvidia. Fable 5.2 melukis fotorealistis lewat kode Python. Dan RBA menemukan yang paling kena lebih dulu di bidang terekspos AI: pekerja umur 15-24.</description>
 </item><item>
 <title>Edisi 20 — Robot yang belajar dari video, dan tagihan yang tidak ikut turun</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-15-edisi-20.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-15-edisi-20.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-15-edisi-20.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-15-edisi-20.html</guid>
 <pubDate>Sun, 15 Nov 2026 00:00:00 +0000</pubDate>
 <description>Runway merilis Praxis-1 27B open weights dan menyalip semua model aksi-dunia, di hari yang sama OpenAI membubarkan tim robotikanya. Lalu tiga tagihan: prompt lama, akurasi 15x lebih mahal, $901 miliar komitmen compute.</description>
 </item><item>
 <title>Edisi 19 — Ruang kontrol yang berhenti, dan tiga cara memegang kendali</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-14-edisi-19.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-14-edisi-19.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-14-edisi-19.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-14-edisi-19.html</guid>
 <pubDate>Sat, 14 Nov 2026 00:00:00 +0000</pubDate>
 <description>FAA menghentikan semua keberangkatan pesawat dua hari setelah sistem AI-nya diperluas ke 22 pusat kontrol. Di hari yang sama Anthropic menyerahkan control plane agent ke pelanggan dan empat NGO menggugat untuk membekukan training.</description>
 </item><item>
 <title>Edisi 18 — Model yang cukup, CEO yang pergi, dan $90 miliar yang tetap masuk</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-13-edisi-18.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-13-edisi-18.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-13-edisi-18.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-13-edisi-18.html</guid>
 <pubDate>Fri, 13 Nov 2026 00:00:00 +0000</pubDate>
 <description>Gemini 4 Hydrogen menyamai Argon di indeks dengan $1,50 per juta token. Di hari yang sama Nvidia kehilangan CEO-nya dan $1,4 triliun nilai pasar, sementara IPO Anthropic enam kali oversubscribed dan Claude mulai ikut rapat.</description>
 </item><item>
 <title>Edisi 17 — 37.966 temuan, 217 perbaikan, dan bukti yang tidak bisa diperiksa model</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-12-edisi-17.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-12-edisi-17.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-12-edisi-17.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-12-edisi-17.html</guid>
 <pubDate>Thu, 12 Nov 2026 00:00:00 +0000</pubDate>
 <description>Glasswing mencatat 37.966 temuan tapi baru 217 yang diperbaiki, dan curl menolak 19 dari 34 laporan. Backdoor cukup lewat sepuluh neuron, AlphaGenome 2 membaca DNA per jenis sel, ChatGPT mulai menjual verifikasi.</description>
 </item><item>
 <title>Edisi 16 — 6 juta baris Lean membuktikan Signal, dan model 4B menggantikan Sonnet</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-11-edisi-16.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-11-edisi-16.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-11-edisi-16.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-11-edisi-16.html</guid>
 <pubDate>Wed, 11 Nov 2026 00:00:00 +0000</pubDate>
 <description>DeepMind memakai agen untuk membuktikan kode protokol Signal secara formal dalam empat minggu. Amazon mengganti Sonnet dengan model keputusan 4B dan memangkas biaya 98%. Anthropic merilis Fable 5.2 di harga $8/$40.</description>
 </item><item>
 <title>Edisi 15 — 60 juta token sehari per orang, dan tes yang lulus tanpa menguji</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-10-edisi-15.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-10-edisi-15.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-10-edisi-15.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-10-edisi-15.html</guid>
 <pubDate>Tue, 10 Nov 2026 00:00:00 +0000</pubDate>
 <description>Harness DeepSeek tembus 1,54 juta pengguna harian dengan 92 triliun token sehari. Google memotong TPU khusus konteks panjang, dan paper baru menunjukkan perintah tes basi bikin agen &#x27;lulus&#x27; tanpa menjalankan satu tes pun.</description>
 </item><item>
 <title>Edisi 14 — Digeser 17 baris, skor agen coding jatuh 20 poin</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-09-edisi-14.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-09-edisi-14.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-09-edisi-14.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-09-edisi-14.html</guid>
 <pubDate>Mon, 09 Nov 2026 00:00:00 +0000</pubDate>
 <description>Mutasi 17 baris di benchmark bikin skor agen jatuh 20 poin, karena model menebak grader. Ditambah bukti kerentanan jailbreak ditentukan seed pretraining, dan 1.122 file .claude publik membawa 1.379 kredensial.</description>
 </item><item>
 <title>Edisi 13 — Bukti diterima Lean di hari ketiga, angka RSA tanpa paper</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-08-edisi-13.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-08-edisi-13.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-08-edisi-13.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-08-edisi-13.html</guid>
 <pubDate>Sun, 08 Nov 2026 00:00:00 +0000</pubDate>
 <description>Sistem riset PSI membuktikan konjektur berumur 18 tahun di hari ketiga dan Lean menerimanya. DeepMind klaim 1.600x lebih cepat memalsukan RSA-1024 tanpa paper, dan satu operator ARTEX mencuri 300 sertifikat Apple dengan $700.</description>
 </item><item>
 <title>Edisi 12 — Dilatih 68 jam, tagihannya naik enam kali</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-07-edisi-12.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-07-edisi-12.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-07-edisi-12.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-07-edisi-12.html</guid>
 <pubDate>Sat, 07 Nov 2026 00:00:00 +0000</pubDate>
 <description>Inkling 2 Small dilatih 68 jam dan skornya naik 18 poin, tapi satu tugas kini makan 150 ribu token dan biaya 6x lipat. METR bilang laju riset Anthropic dua kali lipat, sementara buktinya disensor.</description>
 </item><item>
 <title>Edisi 11 — 948 lubang root, 61 yang sudah ditambal</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-06-edisi-11.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-06-edisi-11.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-06-edisi-11.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-06-edisi-11.html</guid>
 <pubDate>Fri, 06 Nov 2026 00:00:00 +0000</pubDate>
 <description>Satu pipeline agen menemukan 948 cara jadi root di kernel Linux, $1.279 per lubang, tapi baru 61 yang ditambal. Cognition menyembunyikan bobot model coding-nya, dan Anthropic membuktikan asal-usul teks.</description>
 </item><item>
 <title>Edisi 10 — 770B yang belum bisa kamu unduh</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-05-edisi-10.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-05-edisi-10.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-05-edisi-10.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-05-edisi-10.html</guid>
 <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
 <description>Hy4 penuh datang dengan visi dan computer use, tapi bobotnya belum ada. Di hari yang sama Claude menemukan dua lubang VM escape di Xen, dan laptop RTX Spark membuktikan &#x27;terbuka&#x27; bisa berhenti di firmware.</description>
 </item><item>
 <title>Edisi 09 — 0,016% itu Python, dan 44% riset sudah kedaluwarsa</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-04-edisi-09.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-04-edisi-09.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-04-edisi-09.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-04-edisi-09.html</guid>
 <pubDate>Wed, 04 Nov 2026 00:00:00 +0000</pubDate>
 <description>Koreksi untuk Edisi 08: lompatan 7,9% ke 48,1% itu datang dari 50 batch latihan, bukan sulap bobot. Di hari yang sama 44% temuan riset LLM kedaluwarsa dalam 15 bulan, dan CrowdStrike bayar $495 juta untuk memantau agen.</description>
 </item><item>
 <title>Edisi 08 — $895 miliar, dan model terbaik cuma 12%</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-03-edisi-08.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-03-edisi-08.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-03-edisi-08.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-03-edisi-08.html</guid>
 <pubDate>Tue, 03 Nov 2026 00:00:00 +0000</pubDate>
 <description>Anthropic tumbuh 12 kali tapi kembali merugi karena komputasi, Goldman menarik alat coding dari trader, kuota Grok Bot dipotong separuh, dan benchmark baru menunjukkan model terbaik cuma menyelesaikan 12% tugas.</description>
 </item><item>
 <title>Edisi 07 — Bedah tikus bisa, pesan makan belum</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-02-edisi-07.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-02-edisi-07.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-02-edisi-07.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-02-edisi-07.html</guid>
 <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
 <description>Agen Claude memilih obat dan menyuntikkannya ke otak tikus hidup, sementara agen yang dipakai 10 juta orang cuma menghasilkan &#x27;ratusan&#x27; pesanan. Yang mulai matang hari ini bukan kecerdasannya, tapi lapisan ukur, tagih, dan labelnya.</description>
 </item><item>
 <title>Edisi 06 — Bobot yang sama, pagar yang berbeda</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-11-01-edisi-06.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-11-01-edisi-06.html</guid>
+<link>https://kilas.yunarprawira.com/2026-11-01-edisi-06.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-11-01-edisi-06.html</guid>
 <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
 <description>GPT-Rosalind-6 ternyata memakai bobot GPT-6 Astra tanpa dilatih ulang — yang berubah cuma pagarnya. Di hari yang sama Claude membuktikan bisa menyusun data yang lolos monitor Anthropic sendiri, dan satu malware memakai tiga model untuk menyortir korban.</description>
 </item><item>
 <title>Edisi 05 — Ekstensi palsu, TPU di orbit, satu baris robots.txt</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-10-31-edisi-05.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-10-31-edisi-05.html</guid>
+<link>https://kilas.yunarprawira.com/2026-10-31-edisi-05.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-10-31-edisi-05.html</guid>
 <pubDate>Sat, 31 Oct 2026 00:00:00 +0000</pubDate>
 <description>Ekstensi Claude Code versi 2.1.313 disusupi SSH backdoor dan menyentuh sampai 5.000 mesin developer. Di hari yang sama TPU Google menjawab dari orbit, dan empat lab besar sepakat pada satu sinyal opt-out di robots.txt.</description>
 </item><item>
 <title>Edisi 04 — Bobot 1T dibuka, buku besar ikut terbuka</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-10-30-edisi-04.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-10-30-edisi-04.html</guid>
+<link>https://kilas.yunarprawira.com/2026-10-30-edisi-04.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-10-30-edisi-04.html</guid>
 <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
 <description>Mistral melepas bobot model 1 triliun parameternya untuk diunduh siapa saja. Di hari yang sama, S-1 Anthropic memperlihatkan komitmen sekitar $850 miliar, dan OpenAI membuka cara mereka menangkap agen yang menyimpang.</description>
 </item><item>
 <title>Edisi 03 — Carbon, Cipher, dan iklan yang menahan laju Google</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-03.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-03.html</guid>
+<link>https://kilas.yunarprawira.com/2026-10-29-edisi-03.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-10-29-edisi-03.html</guid>
 <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
 <description>Google merilis Gemini 4 Carbon lalu menahannya khusus pembela siber. Di hari yang sama, agen AI lain menemukan empat celah serius di software akselerator partikel. Plus iklan AI Google, peringatan Komdigi, dan Sesko.</description>
 </item><item>
 <title>Edisi 02 — AI sudah masuk ke gaji, ke harga software, dan ke kursi pelatih</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-02.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-02.html</guid>
+<link>https://kilas.yunarprawira.com/2026-10-29-edisi-02.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-10-29-edisi-02.html</guid>
 <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
 <description>Empat hal yang aku pantau hari ini: laporan Workday soal kerja, pergeseran harga SaaS ke outcome-based, tekanan di Manchester United, dan Perpres AI Indonesia yang belum diteken.</description>
 </item><item>
 <title>Edisi 01 — AI makin cepat, tapi makin susah dipercaya</title>
-<link>https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-01.html</link>
-<guid isPermaLink="true">https://yunar-prawira.github.io/brief-ai/2026-10-29-edisi-01.html</guid>
+<link>https://kilas.yunarprawira.com/2026-10-29-edisi-01.html</link>
+<guid isPermaLink="true">https://kilas.yunarprawira.com/2026-10-29-edisi-01.html</guid>
 <pubDate>Thu, 29 Oct 2026 00:00:00 +0000</pubDate>
 <description>Laporan AI Index 2026 dari Stanford baru keluar, dan bulan ini ada belasan model baru rilis. Ini ringkasan yang menurutku paling penting buat kamu baca.</description>
 </item>

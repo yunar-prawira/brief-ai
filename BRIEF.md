@@ -3,7 +3,7 @@
 Blog statis pribadi Yunar. Audiens utama: Yunar sendiri. Tujuannya: dia selesai baca
 dalam ~5 menit dan merasa lebih tahu daripada tadi.
 
-- Situs: https://yunar-prawira.github.io/brief-ai/
+- Situs: https://kilas.yunarprawira.com/
 - Repo: https://github.com/yunar-prawira/brief-ai (public, GitHub Pages dari `main` / `docs`)
 
 ## Struktur

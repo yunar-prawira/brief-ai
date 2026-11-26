@@ -29,8 +29,9 @@ OUT = ROOT / "docs"
 STYLE = ROOT / "style.css"
 
 SITE_TITLE = "Yunar AI Brief"
-SITE_TAGLINE = "Catatan harian soal AI — dan hal lain yang Yunar pedulikan."
-SITE_URL = "https://yunar-prawira.github.io/brief-ai"
+SITE_TAGLINE = "Catatan soal AI tiga kali seminggu — dan hal lain yang Yunar pedulikan."
+SITE_URL = "https://kilas.yunarprawira.com"
+SITE_HOST = "kilas.yunarprawira.com"  # ditulis ke docs/CNAME untuk GitHub Pages
 
 # topik -> (warna utama, warna gradien)
 THEMES = {
@@ -251,7 +252,7 @@ def write_llms(items, by_tag):
         "",
         f"> {SITE_TAGLINE}",
         "",
-        "Blog harian berbahasa Indonesia: satu edisi per hari berisi ringkasan berita AI "
+        "Blog berbahasa Indonesia: tiga edisi per minggu berisi ringkasan berita AI "
         "pilihan, dengan tautan sumber di setiap klaim. Ditulis dan dirawat otomatis.",
         "",
         f"- RSS: {abs_url('/feed.xml')}",
@@ -417,6 +418,7 @@ def build():
     write_robots()
     write_llms(items, by_tag)
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
+    (OUT / "CNAME").write_text(SITE_HOST + "\n", encoding="utf-8")
     print(f"built {len(items)} post, {len(by_tag)} topik, {n_urls} url sitemap -> {OUT}")
 
 
