@@ -211,6 +211,20 @@
   "https://safeguards.anthropic.com/2026/siren/",
   "https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/",
   "https://www.digitbin.com/claude-ship-pull-request-agents-beta/",
-  "https://www.theregister.com/ai-and-ml/2026/11/24/claude-ship-puts-ai-at-the-helm-of-pull-request-approvals/5311883"
+  "https://www.theregister.com/ai-and-ml/2026/11/24/claude-ship-puts-ai-at-the-helm-of-pull-request-approvals/5311883",
+  "https://www.anthropic.com/research/migrating-api-to-rust",
+  "https://thenextweb.com/news/anthropic-claude-messages-api-rust-migration",
+  "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+  "https://github.com/anthropics/claude-code/releases",
+  "https://www.thelabnotes.com/claude-code-mcp-skills-beta/",
+  "https://github.com/anthropics/formal-math/commit/918c8e2778aee18b0283dc5a33ed39ab3cd63a96",
+  "https://github.com/openai/math/commit/e07100d",
+  "https://www.newscientist.com/article/2600542-two-ai-companies-reveal-earth-shattering-solutions-to-major-maths-problem/",
+  "https://www.heise.de/en/news/Math-race-Anthropic-and-OpenAI-offer-near-simultaneous-proofs-of-VP-VNP-11536759.html",
+  "https://www.manilatimes.net/2026/11/27/business/foreign-business/nvidia-stops-server-shipments-to-4-southeast-asian-countries/2478737",
+  "https://katadata.co.id/digital/teknologi/6b080ceec2246/nvidia-setop-pengiriman-server-chip-ai-ke-indonesia-singapura-hingga-malaysia",
+  "https://www.livemint.com/technology/us-chip-curbs-distillation-crackdown-threaten-chinese-ai-model-development-sources-say-11795677620277.html",
+  "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin",
+  "https://sakana.ai/namazu-small/"
  ]
 }

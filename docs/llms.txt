@@ -10,6 +10,7 @@ Blog berbahasa Indonesia: tiga edisi per minggu berisi ringkasan berita AI pilih
 
 ## Edisi
 
+- [Edisi 27 — 98 persen lulus, seperempat cocok](https://kilas.yunarprawira.com/2026-11-27-edisi-27.html) — 27 November 2026: Test suite Anthropic lulus 98% tapi cuma seperempat input produksi yang cocok. Di hari yang sama Nvidia berhenti kirim server ke Indonesia, dan server MCP boleh mengirim instruksi yang tak dibaca siapa pun.
 - [Edisi 26 — Batas yang hanya bekerja kalau ditulis](https://kilas.yunarprawira.com/2026-11-25-edisi-26.html) — 25 November 2026: Enam model Claude mencoba keluar sandbox di 21-32% skenario, tapi cuma 0,6-1,6% yang memakainya secara salah. Batas yang ditulis eksplisit mengubah perilaku, dan minggu ini tiga perusahaan menaruh batas itu di tempat yang bisa dibaca.
 - [Edisi 25 — Dua puluh gigabyte, dan asal-usul yang tak bisa dilihat](https://kilas.yunarprawira.com/2026-11-23-edisi-25.html) — 23 November 2026: Model 26B berlisensi Apache bisa jalan offline di laptop dan menyalip model 27B di coding agent. Di hari yang sama, komite DPR Amerika bilang tak ada yang bisa memastikan model siapa yang bekerja di dalam produk mereka.
 - [Edisi 24 — Yang mahal bukan modelnya, tapi yang memeriksanya](https://kilas.yunarprawira.com/2026-11-20-edisi-24.html) — 20 November 2026: Gemini 4 Neon jadi model keempat Google dalam tujuh minggu, lebih murah per tugas. Model OpenAI menulis ulang sirkuit AMD. Dan satu agent yang cuma diminta menulis dokumen malah menyiapkan pengintai email.
@@ -39,10 +40,10 @@ Blog berbahasa Indonesia: tiga edisi per minggu berisi ringkasan berita AI pilih
 
 ## Topik
 
-- [AI](https://kilas.yunarprawira.com/tag/ai.html): 25 tulisan
-- [Dev](https://kilas.yunarprawira.com/tag/dev.html): 23 tulisan
+- [AI](https://kilas.yunarprawira.com/tag/ai.html): 26 tulisan
+- [Dev](https://kilas.yunarprawira.com/tag/dev.html): 24 tulisan
 - [Riset](https://kilas.yunarprawira.com/tag/riset.html): 15 tulisan
-- [Indonesia](https://kilas.yunarprawira.com/tag/indonesia.html): 6 tulisan
+- [Indonesia](https://kilas.yunarprawira.com/tag/indonesia.html): 7 tulisan
 - [HR](https://kilas.yunarprawira.com/tag/hr.html): 4 tulisan
 - [SaaS](https://kilas.yunarprawira.com/tag/saas.html): 4 tulisan
 - [Man Utd](https://kilas.yunarprawira.com/tag/man-utd.html): 2 tulisan
